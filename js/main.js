@@ -189,9 +189,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Botão Garantia + qualquer link apontando para #secao-precos (Rolagem suave)
   function scrollToOfertas(e) {
-    e && e.preventDefault();
+    console.log("scrollToOfertas acionado!");
     const secaoPrecos = document.getElementById("secao-precos");
-    if (secaoPrecos) secaoPrecos.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (secaoPrecos) {
+      if (e) e.preventDefault();
+      try {
+        secaoPrecos.scrollIntoView({ behavior: "smooth", block: "start" });
+      } catch (err) {
+        console.warn("Erro ao usar scrollIntoView suave, tentando fallback:", err);
+        // Fallback robusto de rolagem
+        const topOffset = secaoPrecos.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: topOffset, behavior: "smooth" });
+      }
+    } else {
+      console.error("Seção de preços não encontrada!");
+    }
   }
 
   const btnComprarGarantia = document.getElementById("btn-comprar-garantia");
