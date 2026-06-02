@@ -5,20 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VISION PRIME STL</title>
-    <!-- Preload da fonte local para evitar FOIT/LCP delay -->
+    <!-- Preload da fonte local para evitar FOIT -->
     <link rel="preload" href="fonts/pxiByp8kv8JHgFVrLDD4V1s.ttf" as="font" type="font/ttf" crossorigin>
+    <!-- Preload da imagem LCP (thumbnail do vídeo) com prioridade máxima -->
+    <link rel="preload" as="image" href="https://fast.wistia.com/embed/medias/wi5u56pi7l/swatch" fetchpriority="high">
+    <link rel="dns-prefetch" href="https://fast.wistia.com">
+    <link rel="preconnect" href="https://fast.wistia.com" crossorigin>
     <link href="css/css2.css" rel="stylesheet">
-    <!-- Otimização de velocidade VTurb -->
-    <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-    <link rel="preload" href="https://scripts.converteai.net/8ba913fb-92f9-42b0-bc97-4a1c759f5aca/players/69dc51c7902df69f63ef5f18/v4/player.js" as="script">
-    <link rel="preload" href="https://scripts.converteai.net/8ba913fb-92f9-42b0-bc97-4a1c759f5aca/players/69dc49b17beae73cea9597fc/v4/player.js" as="script">
-    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-    <link rel="preload" href="https://cdn.converteai.net/8ba913fb-92f9-42b0-bc97-4a1c759f5aca/69dc51a9471b5a40547d4081/main.m3u8" as="fetch">
-    <link rel="preload" href="https://cdn.converteai.net/8ba913fb-92f9-42b0-bc97-4a1c759f5aca/69dc49adb228a6a6dc3eb2e2/main.m3u8" as="fetch">
-    <link rel="dns-prefetch" href="https://cdn.converteai.net">
-    <link rel="dns-prefetch" href="https://scripts.converteai.net">
-    <link rel="dns-prefetch" href="https://images.converteai.net">
-    <link rel="dns-prefetch" href="https://api.vturb.com.br">
     <!-- CSS principal do projeto -->
     <link rel="stylesheet" href="css/styles.css?v=1355">
     
@@ -104,51 +97,25 @@
             <div id="wistia-player-container" style="position: relative; width: 100%; max-width: 400px; margin: 0 auto; border-radius: 1rem; overflow: hidden; margin-bottom: 0.15rem; background: #0D1527; padding: 0 10px 10px 10px;">
               <!-- Wrapper responsivo com proporção 9:16 -->
               <div class="wistia-responsive-wrapper" style="position: relative; width: 100%; padding-top: 177.78%; background: #0D1527; border-radius: 1rem 1rem 0 0; overflow: hidden;">
-                <!-- Fachada estática com imagem e botão de play -->
-                <div id="wistia-facade" style="position: absolute; inset: 0; background: #0D1527 url('https://fast.wistia.com/embed/medias/wi5u56pi7l/swatch') center / cover no-repeat; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: opacity 0.3s ease;">
-                  <div style="width: 70px; height: 70px; background: rgba(13, 123, 248, 0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.55); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <!-- Fachada estática com imagem e botão de play - usa <img> para que o preload scanner do browser encontre a imagem LCP -->
+                <div id="wistia-facade" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: opacity 0.3s ease;">
+                  <img
+                    src="https://fast.wistia.com/embed/medias/wi5u56pi7l/swatch"
+                    alt="Assistir apresentação Vision Prime STL"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                    width="400"
+                    height="711"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 1rem 1rem 0 0;"
+                  >
+                  <div style="width: 70px; height: 70px; background: rgba(13, 123, 248, 0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.55); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="white" style="margin-left: 4px;"><path d="M8 5v14l11-7z"/></svg>
                   </div>
                 </div>
                 <!-- Alvo do player real -->
                 <div id="wistia-player-target" style="position: absolute; inset: 0; width: 100%; height: 100%;"></div>
               </div>
-              <style>
-                wistia-player[media-id='wi5u56pi7l']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/wi5u56pi7l/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }
-                .wistia-overlay {
-                  position: absolute;
-                  bottom: 0;
-                  left: 0;
-                  right: 0;
-                  width: 100%;
-                  height: 90px;
-                  background: #0D1527;
-                  border-radius: 0 0 1rem 1rem;
-                  pointer-events: all;
-                  z-index: 9;
-                  cursor: default;
-                }
-                .wistia-overlay-corner {
-                  position: absolute;
-                  top: -1rem;
-                  width: 1rem;
-                  height: 1rem;
-                  pointer-events: none;
-                }
-                .wistia-overlay-corner-left {
-                  left: 10px;
-                  background: radial-gradient(circle at 100% 0%, transparent 1rem, #0D1527 1.05rem);
-                }
-                .wistia-overlay-corner-right {
-                  right: 10px;
-                  background: radial-gradient(circle at 0% 0%, transparent 1rem, #0D1527 1.05rem);
-                }
-                @media (max-width: 480px) {
-                  .wistia-overlay {
-                    height: 55px;
-                  }
-                }
-              </style>
               <!-- Cobertura do logo Wistia -->
               <div class="wistia-overlay">
                 <!-- Cantos côncavos (invertidos) no topo para arredondar o vídeo -->
@@ -801,7 +768,7 @@
     </div>
 
     <!-- JS principal do projeto -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   
 
 

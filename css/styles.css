@@ -1517,3 +1517,58 @@ body {
   color: #6b7280;
   text-decoration: underline;
 }
+
+/* ==========================================================
+   Wistia Overlay (cobre controles/logo do player)
+   ========================================================== */
+.wistia-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 90px;
+  background: #0D1527;
+  border-radius: 0 0 1rem 1rem;
+  pointer-events: all;
+  z-index: 9;
+  cursor: default;
+}
+
+.wistia-overlay-corner {
+  position: absolute;
+  top: -1rem;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+}
+
+.wistia-overlay-corner-left {
+  left: 10px;
+  background: radial-gradient(circle at 100% 0%, transparent 1rem, #0D1527 1.05rem);
+}
+
+.wistia-overlay-corner-right {
+  right: 10px;
+  background: radial-gradient(circle at 0% 0%, transparent 1rem, #0D1527 1.05rem);
+}
+
+@media (max-width: 480px) {
+  .wistia-overlay {
+    height: 55px;
+  }
+}
+
+/* ==========================================================
+   Otimização de renderização - seções abaixo do fold
+   content-visibility: auto = browser pula paint/layout das
+   seções fora da viewport, economizando até 50% CPU no load
+   ========================================================== */
+.benefits,
+.gallery,
+.testimonials,
+.cta-section,
+.upgrade-modal {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
