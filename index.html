@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VISION PRIME STL</title>
-    <!-- Preload da fonte local para evitar FOIT -->
-    <link rel="preload" href="fonts/pxiByp8kv8JHgFVrLDD4V1s.ttf" as="font" type="font/ttf" crossorigin>
-    <!-- Preload da imagem LCP (thumbnail do vídeo) com prioridade máxima -->
-    <link rel="preload" as="image" href="https://fast.wistia.com/embed/medias/wi5u56pi7l/swatch" fetchpriority="high">
+    <!-- Preload da capa do vídeo: e o maior elemento da primeira dobra,
+         entao e ele que define o LCP. Arquivo local, recortado em 9:16. -->
+    <link rel="preload" as="image" href="images/capa-video.webp" fetchpriority="high">
     <link rel="dns-prefetch" href="https://fast.wistia.com">
     <link rel="preconnect" href="https://fast.wistia.com" crossorigin>
-    <link href="css/css2.css" rel="stylesheet">
     <!-- CSS principal do projeto -->
+    <link href="css/css2.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css?v=1355">
     
     <!-- Script para capturar UTMs IMEDIATAMENTE e deferir carregamento de rastreadores pesados -->
@@ -100,7 +99,7 @@
                 <!-- Fachada estática com imagem e botão de play - usa <img> para que o preload scanner do browser encontre a imagem LCP -->
                 <div id="wistia-facade" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: opacity 0.3s ease;">
                   <img
-                    src="https://fast.wistia.com/embed/medias/wi5u56pi7l/swatch"
+                    src="images/capa-video.webp"
                     alt="Assistir apresentação Vision Prime STL"
                     fetchpriority="high"
                     loading="eager"
@@ -159,11 +158,11 @@
                   facade.addEventListener('click', loadWistiaVideo);
                 }
 
-                // Defer loading video elements automatically after page load + delay to improve LCP/Speed Index
-                window.addEventListener('load', function() {
-                  setTimeout(loadWistiaVideo, 2500);
-                });
-                
+                // Antes havia aqui um setTimeout de 2,5s apos o load que trazia o
+                // player para TODO mundo. Sao 212KB e ~455ms de thread travada,
+                // gastos mesmo por quem nunca ia assistir. Agora o player entra
+                // no clique ou na primeira interacao (listeners logo abaixo).
+
                 // Also trigger load on scroll/interaction as a backup
                 const triggerEvents = ['touchstart', 'scroll', 'mousemove', 'keydown'];
                 triggerEvents.forEach(function(event) {
@@ -254,74 +253,74 @@
                 <!-- Original Set -->
                 <div class="gallery-carousel__slide">
                   <div class="gallery__image">
-                    <img src="images/01 ANIMES.webp" alt="Coleção Animes" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/01 ANIMES.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/01 ANIMES.png';}">
+                    <img srcset="images/01%20ANIMES-600.webp 600w, images/01%20ANIMES.webp 1024w" sizes="280px" src="images/01 ANIMES.webp" alt="Coleção Animes" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/01 ANIMES.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/01 ANIMES.png';}">
                   </div>
                   <span class="gallery__label">Animes</span>
                 </div>
                 <div class="gallery-carousel__slide">
                   <div class="gallery__image">
-                    <img src="images/02 DESENHOS.webp" alt="Coleção Desenhos" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/02 DESENHOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/02 DESENHOS.png';}">
+                    <img srcset="images/02%20DESENHOS-600.webp 600w, images/02%20DESENHOS.webp 1024w" sizes="280px" src="images/02 DESENHOS.webp" alt="Coleção Desenhos" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/02 DESENHOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/02 DESENHOS.png';}">
                   </div>
                   <span class="gallery__label">Desenhos</span>
                 </div>
                 <div class="gallery-carousel__slide">
                   <div class="gallery__image">
-                    <img src="images/03 RELIGIÃO.webp" alt="Coleção Religião" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/03 RELIGIÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/03 RELIGIÃO.png';}">
+                    <img srcset="images/03%20RELIGIÃO-600.webp 600w, images/03%20RELIGIÃO.webp 1024w" sizes="280px" src="images/03 RELIGIÃO.webp" alt="Coleção Religião" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/03 RELIGIÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/03 RELIGIÃO.png';}">
                   </div>
                   <span class="gallery__label">Religião</span>
                 </div>
                 <div class="gallery-carousel__slide">
                   <div class="gallery__image">
-                    <img src="images/04 MITOLOGIA.webp" alt="Coleção Mitologia" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/04 MITOLOGIA.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/04 MITOLOGIA.png';}">
+                    <img srcset="images/04%20MITOLOGIA-600.webp 600w, images/04%20MITOLOGIA.webp 1024w" sizes="280px" src="images/04 MITOLOGIA.webp" alt="Coleção Mitologia" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/04 MITOLOGIA.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/04 MITOLOGIA.png';}">
                   </div>
                   <span class="gallery__label">Mitologia</span>
                 </div>
                 <div class="gallery-carousel__slide">
                   <div class="gallery__image">
-                    <img src="images/05 DECORAÇÃO.webp" alt="Coleção Decoração" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/05 DECORAÇÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/05 DECORAÇÃO.png';}">
+                    <img srcset="images/05%20DECORAÇÃO-600.webp 600w, images/05%20DECORAÇÃO.webp 1024w" sizes="280px" src="images/05 DECORAÇÃO.webp" alt="Coleção Decoração" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/05 DECORAÇÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/05 DECORAÇÃO.png';}">
                   </div>
                   <span class="gallery__label">Decoração</span>
                 </div>
                 <div class="gallery-carousel__slide">
                   <div class="gallery__image">
-                    <img src="images/06 DIVERSOS.webp" alt="Diversos" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/06 DIVERSOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/06 DIVERSOS.png';}">
+                    <img srcset="images/06%20DIVERSOS-600.webp 600w, images/06%20DIVERSOS.webp 1024w" sizes="280px" src="images/06 DIVERSOS.webp" alt="Diversos" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/06 DIVERSOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/06 DIVERSOS.png';}">
                   </div>
                   <span class="gallery__label">DIVERSOS</span>
                 </div>
                 <!-- Duplicated Set for Infinite Scroll -->
                 <div class="gallery-carousel__slide" aria-hidden="true">
                   <div class="gallery__image">
-                    <img src="images/01 ANIMES.webp" alt="Coleção Animes" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/01 ANIMES.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/01 ANIMES.png';}">
+                    <img srcset="images/01%20ANIMES-600.webp 600w, images/01%20ANIMES.webp 1024w" sizes="280px" src="images/01 ANIMES.webp" alt="Coleção Animes" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/01 ANIMES.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/01 ANIMES.png';}">
                   </div>
                   <span class="gallery__label">Animes</span>
                 </div>
                 <div class="gallery-carousel__slide" aria-hidden="true">
                   <div class="gallery__image">
-                    <img src="images/02 DESENHOS.webp" alt="Coleção Desenhos" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/02 DESENHOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/02 DESENHOS.png';}">
+                    <img srcset="images/02%20DESENHOS-600.webp 600w, images/02%20DESENHOS.webp 1024w" sizes="280px" src="images/02 DESENHOS.webp" alt="Coleção Desenhos" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/02 DESENHOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/02 DESENHOS.png';}">
                   </div>
                   <span class="gallery__label">Desenhos</span>
                 </div>
                 <div class="gallery-carousel__slide" aria-hidden="true">
                   <div class="gallery__image">
-                    <img src="images/03 RELIGIÃO.webp" alt="Coleção Religião" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/03 RELIGIÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/03 RELIGIÃO.png';}">
+                    <img srcset="images/03%20RELIGIÃO-600.webp 600w, images/03%20RELIGIÃO.webp 1024w" sizes="280px" src="images/03 RELIGIÃO.webp" alt="Coleção Religião" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/03 RELIGIÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/03 RELIGIÃO.png';}">
                   </div>
                   <span class="gallery__label">Religião</span>
                 </div>
                 <div class="gallery-carousel__slide" aria-hidden="true">
                   <div class="gallery__image">
-                    <img src="images/04 MITOLOGIA.webp" alt="Coleção Mitologia" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/04 MITOLOGIA.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/04 MITOLOGIA.png';}">
+                    <img srcset="images/04%20MITOLOGIA-600.webp 600w, images/04%20MITOLOGIA.webp 1024w" sizes="280px" src="images/04 MITOLOGIA.webp" alt="Coleção Mitologia" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/04 MITOLOGIA.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/04 MITOLOGIA.png';}">
                   </div>
                   <span class="gallery__label">Mitologia</span>
                 </div>
                 <div class="gallery-carousel__slide" aria-hidden="true">
                   <div class="gallery__image">
-                    <img src="images/05 DECORAÇÃO.webp" alt="Coleção Decoração" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/05 DECORAÇÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/05 DECORAÇÃO.png';}">
+                    <img srcset="images/05%20DECORAÇÃO-600.webp 600w, images/05%20DECORAÇÃO.webp 1024w" sizes="280px" src="images/05 DECORAÇÃO.webp" alt="Coleção Decoração" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/05 DECORAÇÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/05 DECORAÇÃO.png';}">
                   </div>
                   <span class="gallery__label">Decoração</span>
                 </div>
                 <div class="gallery-carousel__slide" aria-hidden="true">
                   <div class="gallery__image">
-                    <img src="images/06 DIVERSOS.webp" alt="Diversos" width="280" height="280" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/06 DIVERSOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/06 DIVERSOS.png';}">
+                    <img srcset="images/06%20DIVERSOS-600.webp 600w, images/06%20DIVERSOS.webp 1024w" sizes="280px" src="images/06 DIVERSOS.webp" alt="Diversos" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/06 DIVERSOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/06 DIVERSOS.png';}">
                   </div>
                   <span class="gallery__label">DIVERSOS</span>
                 </div>
@@ -349,7 +348,7 @@
               <h3 class="bonus-card__number">BÔNUS 1:</h3>
               <h4 class="bonus-card__title">PACOTE DE VEÍCULOS 3D PROFISSIONAIS</h4>
               <div class="bonus-card__image">
-                <img src="images/07 VEICULOS.webp" alt="Pacote de Veículos 3D" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/07 VEICULOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/07 VEICULOS.png';}">
+                <img srcset="images/07%20VEICULOS-600.webp 600w, images/07%20VEICULOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/07 VEICULOS.webp" alt="Pacote de Veículos 3D" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/07 VEICULOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/07 VEICULOS.png';}">
               </div>
               <p class="bonus-card__description">
                 Automóveis, motocicletas, caminhões e outros prontos para impressão em 3D. Desenvolva miniaturas com detalhes, itens para colecionadores ou customize modelos para revenda.
@@ -364,7 +363,7 @@
               <h3 class="bonus-card__number">BÔNUS 2:</h3>
               <h4 class="bonus-card__title">COLEÇÃO DE PERSONAGENS HERÓICOS DA MARVEL</h4>
               <div class="bonus-card__image">
-                <img src="images/08 HEROIS.webp" alt="Coleção Marvel" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/08 HEROIS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/08 HEROIS.png';}">
+                <img srcset="images/08%20HEROIS-600.webp 600w, images/08%20HEROIS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/08 HEROIS.webp" alt="Coleção Marvel" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/08 HEROIS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/08 HEROIS.png';}">
               </div>
               <p class="bonus-card__description">
                 Receba uma incrível coleção de modelos STL de heróis icônicos da Marvel: personagens, emblemas e itens que são um sucesso entre colecionadores e admiradores.
@@ -379,7 +378,7 @@
               <h3 class="bonus-card__number">BÔNUS 3:</h3>
               <h4 class="bonus-card__title">PACOTE DE CHAVEIROS PERSONALIZADOS</h4>
               <div class="bonus-card__image">
-                <img src="images/09 CHAVEIROS.webp" alt="Pacote de chaveiros" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/09 CHAVEIROS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/09 CHAVEIROS.png';}">
+                <img srcset="images/09%20CHAVEIROS-600.webp 600w, images/09%20CHAVEIROS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/09 CHAVEIROS.webp" alt="Pacote de chaveiros" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/09 CHAVEIROS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/09 CHAVEIROS.png';}">
               </div>
               <p class="bonus-card__description">
                 Mais de 1.000 modelos originais e criativos, como logotipos, personagens, esportes e temas geek. Ideal para comercializar como brindes ou itens colecionáveis.
@@ -394,7 +393,7 @@
               <h3 class="bonus-card__number">BÔNUS 4:</h3>
               <h4 class="bonus-card__title">UTENSÍLIOS PARA CASA</h4>
               <div class="bonus-card__image">
-                <img src="images/10 UTENSILIOS.webp" alt="Utensílios para Casa" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/10 UTENSILIOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/10 UTENSILIOS.png';}">
+                <img srcset="images/10%20UTENSILIOS-600.webp 600w, images/10%20UTENSILIOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/10 UTENSILIOS.webp" alt="Utensílios para Casa" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/10 UTENSILIOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/10 UTENSILIOS.png';}">
               </div>
               <p class="bonus-card__description">
                 Abrange modelos úteis para uso pessoal e profissional, como suportes, organizadores, réguas e adaptadores. Tenha impressões eficazes que ajudam nos problemas do dia a dia
@@ -409,7 +408,7 @@
               <h3 class="bonus-card__number">BÔNUS 5:</h3>
               <h4 class="bonus-card__title">MODELOS MALEÁVEIS E DOBRÁVEIS</h4>
               <div class="bonus-card__image">
-                <img src="images/11 ARTICULADOS.webp" alt="Modelos Maleáveis" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/11 ARTICULADOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/11 ARTICULADOS.png';}">
+                <img srcset="images/11%20ARTICULADOS-600.webp 600w, images/11%20ARTICULADOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/11 ARTICULADOS.webp" alt="Modelos Maleáveis" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/11 ARTICULADOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/11 ARTICULADOS.png';}">
               </div>
               <p class="bonus-card__description">
                 Existem mais de 1.300 modelos com mechanisms de clique e movimento, incluindo animais, brinquedos e itens colecionáveis interativos. Peças já prontas que têm maior venda em marketplaces e lojas de impressão 3D.
@@ -424,7 +423,7 @@
               <h3 class="bonus-card__number">BÔNUS 6:</h3>
               <h4 class="bonus-card__title">COLEÇÃO DOS CLÁSSICOS DE DESENHOS</h4>
               <div class="bonus-card__image">
-                <img src="images/12 CLASSICOS.webp" alt="COLEÇÃO DOS CLÁSSICOS DE DESENHOS" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/12 CLASSICOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/12 CLASSICOS.png';}">
+                <img srcset="images/12%20CLASSICOS-600.webp 600w, images/12%20CLASSICOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/12 CLASSICOS.webp" alt="COLEÇÃO DOS CLÁSSICOS DE DESENHOS" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/12 CLASSICOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/12 CLASSICOS.png';}">
               </div>
               <p class="bonus-card__description">
                 Uma escolha nostálgica que reúne mais de 30 personagens adorados da televisão: Johnny Bravo, As Meninas Superpoderosas, Dexter, Scooby Doo, Tom e Jerry e muitos outros. Ideal para colecionadores e admiradores de animações.
@@ -439,7 +438,7 @@
               <h3 class="bonus-card__number">BÔNUS 7:</h3>
               <h4 class="bonus-card__title">COLEÇÃO DE MÁSCARAS EM 3D</h4>
               <div class="bonus-card__image">
-                <img src="images/13 MASCARAS.webp" alt="Coleção de Máscaras em 3D" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/13 MASCARAS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/13 MASCARAS.png';}">
+                <img srcset="images/13%20MASCARAS-600.webp 600w, images/13%20MASCARAS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/13 MASCARAS.webp" alt="Coleção de Máscaras em 3D" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/13 MASCARAS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/13 MASCARAS.png';}">
               </div>
               <p class="bonus-card__description">
                 Uma variedade de máscaras elaboradas, prontas para serem impressas. Excelentes para cosplay, enfeites e artigos de alto valor. Ótimas para comercializar, colecionar ou customizar.
@@ -454,7 +453,7 @@
               <h3 class="bonus-card__number">BÔNUS 8:</h3>
               <h4 class="bonus-card__title">COLEÇÃO POKÉMON EM 3D</h4>
               <div class="bonus-card__image">
-                <img src="images/14 POKEMON.webp" alt="COLEÇÃO POKÉMON EM 3D" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/14 POKEMON.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/14 POKEMON.png';}">
+                <img srcset="images/14%20POKEMON-600.webp 600w, images/14%20POKEMON.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/14 POKEMON.webp" alt="COLEÇÃO POKÉMON EM 3D" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/14 POKEMON.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/14 POKEMON.png';}">
               </div>
               <p class="bonus-card__description">
                 Mais de 100 modelos da gerações iniciais de Pokémon. Criaturas emblemáticas, evoluções e itens temáticos. Ideal para entusiastas, colecionadores e comércio eletrônico.
@@ -476,7 +475,7 @@
               <h3 class="bonus-card__number">BÔNUS ESPECIAL:</h3>
               <h4 class="bonus-card__title">COLEÇÃO DE BRINQUEDOS EM 3D</h4>
               <div class="bonus-card__image">
-                <img src="images/15 BRINQUEDOS.webp" alt="COLEÇÃO DE BRINQUEDOS EM 3D" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/15 BRINQUEDOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/15 BRINQUEDOS.png';}">
+                <img srcset="images/15%20BRINQUEDOS-600.webp 600w, images/15%20BRINQUEDOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/15 BRINQUEDOS.webp" alt="COLEÇÃO DE BRINQUEDOS EM 3D" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/15 BRINQUEDOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/15 BRINQUEDOS.png';}">
               </div>
               <p class="bonus-card__description">
                 Vários brinquedos, tanto tradicionais quanto contemporâneos, estão disponíveis para impressão: automóveis, peões, peonzas, quebra-cabeças e muitos outros. Modelos atrativos que têm um grande sucesso em feiras, lojas e plataformas de venda.
@@ -491,7 +490,7 @@
               <h3 class="bonus-card__number">BÔNUS ESPECIAL:</h3>
               <h4 class="bonus-card__title">COLEÇÃO PREMIUM DE MODELOS ÚNICOS</h4>
               <div class="bonus-card__image">
-                <img src="images/16 ESPECIAL.webp" alt="COLEÇÃO PREMIUM DE MODELOS ÚNICOS" width="300" height="194" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/16 ESPECIAL.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/16 ESPECIAL.png';}">
+                <img srcset="images/16%20ESPECIAL-600.webp 600w, images/16%20ESPECIAL.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/16 ESPECIAL.webp" alt="COLEÇÃO PREMIUM DE MODELOS ÚNICOS" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/16 ESPECIAL.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/16 ESPECIAL.png';}">
               </div>
               <p class="bonus-card__description">
                 Coleção exclusiva com centenas de modelos premium escolhidos: itens únicos, designs criativos e modelos de alta qualidade prontos para impressão 3D. Converta sua impressora em uma fonte de lucro com produtos exclusivos que se sobressaem no mercado!
@@ -528,7 +527,7 @@
               </p>
               <div class="testimonial-card__author">
                 <span class="testimonial-card__avatar">
-                  <img src="images/DEP. MARINA.webp" alt="Marina H." width="40" height="40" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/DEP. MARINA.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/DEP. MARINA.png';}">
+                  <img src="images/DEP. MARINA-120.webp" alt="Marina H." width="40" height="40" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/DEP. MARINA.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/DEP. MARINA.png';}">
                 </span>
                 <div>
                   <strong>Marina H.</strong>
@@ -544,7 +543,7 @@
               </p>
               <div class="testimonial-card__author">
                 <span class="testimonial-card__avatar">
-                  <img src="images/DEP. LUIS.webp" alt="Luis M." width="40" height="40" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/DEP. LUIS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/DEP. LUIS.png';}">
+                  <img src="images/DEP. LUIS-120.webp" alt="Luis M." width="40" height="40" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/DEP. LUIS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/DEP. LUIS.png';}">
                 </span>
                 <div>
                   <strong>Luis M.</strong>
@@ -560,7 +559,7 @@
               </p>
               <div class="testimonial-card__author">
                 <span class="testimonial-card__avatar">
-                  <img src="images/DEP. RICARDO.webp" alt="Ricardo A." width="40" height="40" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/DEP. RICARDO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/DEP. RICARDO.png';}">
+                  <img src="images/DEP. RICARDO-120.webp" alt="Ricardo A." width="40" height="40" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/DEP. RICARDO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/DEP. RICARDO.png';}">
                 </span>
                 <div>
                   <strong>Ricardo A.</strong>

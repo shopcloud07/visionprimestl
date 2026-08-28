@@ -3,5 +3,7 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(../fonts/pxiByp8kv8JHgFVrLDD4V1s.ttf) format('truetype');
+  /* WOFF2 com subconjunto latino: 9,8 KB no lugar dos 145,6 KB do TTF.
+     O TTF trazia 94 glifos em devanagari que esta pagina nunca usa. */
+  src: url(../fonts/poppins-800.woff2) format('woff2');
 }

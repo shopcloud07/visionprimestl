@@ -276,5 +276,33 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTimer();
   }
 
+  // ==============================================================
+  // 6. CARROSSEL: libera as imagens que ficam fora da tela na horizontal
+  // ==============================================================
+  // A faixa do carrossel e mais larga que o celular. Os ultimos slides
+  // ficam a ~1200px a direita e o loading="lazy" nativo, que so olha a
+  // distancia ate o viewport, nunca os libera: eles rodavam em branco.
+  // Aqui, quando o carrossel se aproxima da tela, marcamos as imagens
+  // como eager - ai o navegador baixa todas, estejam onde estiverem.
+  const carrossel = document.querySelector(".gallery-carousel__container");
+  if (carrossel) {
+    const liberarSlides = () => {
+      carrossel.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+        img.loading = "eager";
+      });
+    };
+    if ("IntersectionObserver" in window) {
+      const observador = new IntersectionObserver((entradas, obs) => {
+        if (entradas.some((e) => e.isIntersecting)) {
+          liberarSlides();
+          obs.disconnect();
+        }
+      }, { rootMargin: "300px" }); // comeca um pouco antes, para nao aparecer vazio
+      observador.observe(carrossel);
+    } else {
+      liberarSlides(); // navegador antigo: carrega logo, melhor que slide vazio
+    }
+  }
+
   console.log("JavaScript carregado: Modo Universal Ativo.");
 });
