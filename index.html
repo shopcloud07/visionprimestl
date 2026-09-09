@@ -263,15 +263,45 @@
     .notification-product{font-weight:800}
 
     /* Upsell Popup */
-    .upsell-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;align-items:center;justify-content:center;padding:20px;animation:fadeIn .3s ease}
+    .upsell-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;align-items:center;justify-content:center;padding:16px;animation:fadeIn .3s ease}
     @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-    .upsell-box{background:#fff;border-radius:16px;padding:32px 26px;max-width:440px;width:100%;position:relative;box-shadow:0 25px 50px rgba(0,0,0,.25);animation:popIn .3s ease;max-height:92vh;overflow-y:auto}
+    .upsell-box{background:#fff;border-radius:16px;padding:28px 24px;max-width:440px;width:100%;position:relative;box-shadow:0 25px 50px rgba(0,0,0,.25);animation:popIn .3s ease;max-height:96vh;overflow-y:auto;line-height:1.45}
     @keyframes popIn{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
-    .upsell-box h2{font-size:1.22rem;margin-bottom:12px;text-align:center;text-transform:uppercase}
+    .upsell-box h2{font-size:1.22rem;margin-bottom:10px;text-align:center;text-transform:uppercase;line-height:1.25}
     .upsell-close{position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.8rem;cursor:pointer;color:#64748b;line-height:1}
+    .upsell-icon{text-align:center;margin-bottom:12px;font-size:2.2rem;line-height:1}
+    .upsell-intro{font-size:.9rem;text-align:center;color:#64748b;margin-bottom:16px}
+    .upsell-offer{background:linear-gradient(135deg,#f5f3ff,#ede9fe);border-radius:12px;padding:18px 16px;margin-bottom:16px;border:2px solid var(--primary);text-align:center}
+    .upsell-offer__title{font-weight:800;font-size:1.02rem;margin-bottom:6px;color:#1e293b;line-height:1.25}
+    .upsell-offer__old{text-decoration:line-through;color:#64748b;font-size:.88rem;margin-bottom:2px}
+    .upsell-offer__price{font-size:2rem;font-weight:900;color:var(--primary);margin-bottom:2px;line-height:1.1}
+    .upsell-offer__save{font-size:.78rem;color:#16a34a;font-weight:700;margin-bottom:12px}
     .upsell-list{list-style:none;margin:0;text-align:left;display:grid;gap:6px}
-    .upsell-list li{font-size:.84rem;color:#334155;display:flex;gap:8px;align-items:center}
+    .upsell-list li{font-size:.84rem;color:#334155;display:flex;gap:8px;align-items:center;line-height:1.35}
     .upsell-list i{color:#16a34a}
+    .upsell-cta{background:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(124,58,237,.4);margin-bottom:12px;font-size:.95rem}
+    .upsell-skip{display:block;text-align:center;font-size:.76rem;color:#94a3b8;text-decoration:none}
+    body.popup-open{overflow:hidden}
+    body.popup-open .notification-container{display:none}
+
+    /* Popup compacto: cabe inteiro na tela, sem rolagem */
+    @media(max-width:480px),(max-height:760px){
+      .upsell-overlay{padding:10px}
+      .upsell-box{padding:18px 16px;border-radius:14px;line-height:1.35}
+      .upsell-close{font-size:1.5rem;top:6px;right:10px}
+      .upsell-icon{font-size:1.6rem;margin-bottom:6px}
+      .upsell-box h2{font-size:1rem;margin-bottom:6px}
+      .upsell-intro{font-size:.78rem;margin-bottom:10px}
+      .upsell-offer{padding:12px;margin-bottom:10px}
+      .upsell-offer__title{font-size:.88rem;margin-bottom:4px}
+      .upsell-offer__old{font-size:.78rem}
+      .upsell-offer__price{font-size:1.65rem}
+      .upsell-offer__save{font-size:.72rem;margin-bottom:8px}
+      .upsell-list{gap:3px}
+      .upsell-list li{font-size:.76rem}
+      .upsell-cta{padding:12px;font-size:.85rem;margin-bottom:8px}
+      .upsell-skip{font-size:.7rem}
+    }
 
     @media(max-width:560px){
       .hero-eyebrow{font-size:.78rem;gap:8px;padding:6px 12px}
@@ -766,25 +796,25 @@
   </footer>
 
   <!-- Upsell Popup (downsell do básico) -->
-  <div class="upsell-overlay" id="upsellPopup" onclick="if(event.target===this)this.style.display='none';">
+  <div class="upsell-overlay" id="upsellPopup" onclick="if(event.target===this)fecharUpsell();">
     <div class="upsell-box">
-      <button class="upsell-close" onclick="document.getElementById('upsellPopup').style.display='none';" aria-label="Fechar">&times;</button>
-      <div style="text-align:center;margin-bottom:14px"><span style="font-size:2.4rem">&#9888;&#65039;</span></div>
+      <button class="upsell-close" onclick="fecharUpsell()" aria-label="Fechar">&times;</button>
+      <div class="upsell-icon">&#9888;&#65039;</div>
       <h2>Espere! Oferta exclusiva</h2>
-      <p style="font-size:.92rem;text-align:center;color:#64748b;margin-bottom:18px">No Kit Básico você leva 47 mil arquivos e acesso por 1 ano. <strong>Sem os outros 8 bônus e sem acesso vitalício.</strong></p>
-      <div style="background:linear-gradient(135deg,#f5f3ff,#ede9fe);border-radius:12px;padding:20px;margin-bottom:18px;border:2px solid var(--primary)">
-        <p style="text-align:center;font-weight:800;font-size:1.05rem;margin-bottom:8px;color:#1e293b">Upgrade para o Premium com desconto extra</p>
-        <p style="text-align:center;margin-bottom:2px"><span style="text-decoration:line-through;color:#64748b;font-size:.9rem">R$27,90</span></p>
-        <p style="text-align:center;font-size:2rem;font-weight:900;color:var(--primary);margin-bottom:2px">R$19,90</p>
-        <p style="text-align:center;font-size:.78rem;color:#16a34a;font-weight:700;margin-bottom:14px">Economize R$8,00 agora</p>
+      <p class="upsell-intro">No Kit Básico você leva 47 mil arquivos e acesso por 1 ano. <strong>Sem os outros 8 bônus e sem acesso vitalício.</strong></p>
+      <div class="upsell-offer">
+        <p class="upsell-offer__title">Upgrade para o Premium com desconto extra</p>
+        <p class="upsell-offer__old">R$27,90</p>
+        <p class="upsell-offer__price">R$19,90</p>
+        <p class="upsell-offer__save">Economize R$8,00 agora</p>
         <ul class="upsell-list">
           <li><i class="fas fa-check"></i> Pacote com +97.000 arquivos STL</li>
           <li><i class="fas fa-check"></i> Acesso vitalício</li>
           <li><i class="fas fa-check"></i> Acesso a todos os 10 bônus</li>
         </ul>
       </div>
-      <a href="https://tilimcheckout.com/checkout?p=ef58bb1e413e2e30e23773f14bd88ad3" class="plan-button IC-Geral" style="background:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(124,58,237,.4);margin-bottom:14px;font-size:.95rem">SIM, QUERO O DESCONTO!</a>
-      <a href="https://tilimcheckout.com/checkout?p=a97738ddcf961f6595f7be3085e0311d" class="IC-Geral" style="display:block;text-align:center;font-size:.76rem;color:#94a3b8;text-decoration:none">Não, obrigado. Quero apenas o pacote básico.</a>
+      <a href="https://tilimcheckout.com/checkout?p=ef58bb1e413e2e30e23773f14bd88ad3" class="plan-button upsell-cta IC-Geral">SIM, QUERO O DESCONTO!</a>
+      <a href="https://tilimcheckout.com/checkout?p=a97738ddcf961f6595f7be3085e0311d" class="upsell-skip IC-Geral">Não, obrigado. Quero apenas o pacote básico.</a>
     </div>
   </div>
 
@@ -904,10 +934,15 @@
     setInterval(showNotification, 15000);
 
     // Downsell no botão do básico
+    function fecharUpsell(){
+      document.getElementById('upsellPopup').style.display = 'none';
+      document.body.classList.remove('popup-open');
+    }
     document.getElementById('btnBasico').addEventListener('click', function(e){
       e.preventDefault();
       e.stopPropagation();
       document.getElementById('upsellPopup').style.display = 'flex';
+      document.body.classList.add('popup-open');
       return false;
     });
 
