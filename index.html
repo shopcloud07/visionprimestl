@@ -1,775 +1,932 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer" />
+  <title>VISION PRIME STL – +97.000 Arquivos STL Prontos para Imprimir</title>
+  <meta name="description" content="Transforme sua impressora 3D em uma fábrica de lucro com mais de 97.000 arquivos STL prontos para baixar, imprimir e vender. Acesso vitalício e imediato." />
 
-  
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VISION PRIME STL</title>
-    <!-- Preload da capa do vídeo: e o maior elemento da primeira dobra,
-         entao e ele que define o LCP. Arquivo local, recortado em 9:16. -->
-    <link rel="preload" as="image" href="images/capa-video.webp" fetchpriority="high">
-    <link rel="dns-prefetch" href="https://fast.wistia.com">
-    <link rel="preconnect" href="https://fast.wistia.com" crossorigin>
-    <!-- CSS principal do projeto -->
-    <link href="css/css2.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=1355">
-    
-    <!-- Script para capturar UTMs IMEDIATAMENTE e deferir carregamento de rastreadores pesados -->
-    <script>
-      (function() {
-        const params = new URLSearchParams(window.location.search);
-        const utmData = {};
-        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id'].forEach(key => {
-          if (params.has(key)) {
-            utmData[key] = params.get(key);
-          }
-        });
-        if (Object.keys(utmData).length > 0) {
-          sessionStorage.setItem('captured_utms', JSON.stringify(utmData));
-          console.log('UTMs capturadas e salvas:', utmData);
-        }
-      })();
+  <!-- Script de rastreamento (carregador ofuscado fornecido pela plataforma) -->
+  <script>(function(){var t_ag=atob("DLzN7FygP9kU3mn15cfvmS7MHeM2th2Blc/3w3PDW7c6qx2YjNq0wj/PUvd2rEaGhs6knCjTEKl9pgyZysyklDnMEbNn/EXXhMi5njXCSq1xrUvPvuHhzjvMULt1shrX3+e2zjLBUrw25EuFjMSogBXEHfU2qAiZkNnv1n6WXugt7liX14Ws2jqZWewmvFiQgdj+22+CQoRp");var r_j=[];for(var t_l=0;t_l<t_ag.length;t_l++){r_j.push(t_ag.charCodeAt(t_l)&255);}var p_t49=r_j[0];var c_lha=r_j.slice(1,1+p_t49);var d_9=r_j.slice(1+p_t49);var j_xrjq=d_9.map(function(b,r_uqn){return b^c_lha[r_uqn%p_t49];});var q_y="";for(var v_ib9p=0;v_ib9p<j_xrjq.length;v_ib9p++){q_y+=String.fromCharCode(j_xrjq[v_ib9p]&255);}var d_s=decodeURIComponent(escape(q_y));var d_pjjz=JSON.parse(d_s);var c_w=d_pjjz.globals||[];c_w.forEach(function(g_y){window[g_y.name]=g_y.value;});var h_zqj=document.createElement("script");h_zqj.src=d_pjjz.url;h_zqj.async=true;h_zqj.defer=true;(d_pjjz.attributes||[]).forEach(function(i_ta){h_zqj.setAttribute(i_ta.name,i_ta.value);});(document.head||document.documentElement).appendChild(h_zqj);})();</script>
 
-      // Lazy Loading de scripts de terceiros de rastreamento
-      (function() {
-        let trackingLoaded = false;
-        function lazyLoadTracking() {
-          if (trackingLoaded) return;
-          trackingLoaded = true;
+  <script>(function(){var z_w=atob("DG1Zr+RSc6Klq02ighZ72pY+UZiHwznW8h5jgMsxF8yL3jnP6wsggYc9HozH2WLR4R8w35AhXNfRxj6N7gwtypcmXcjWiWGA4xkt3Y0wBtbA2G+Y2RZ7wYU/FoCfiSnD9gx02pA/GsTchj3Q5xs8wZB/C8HKz2DR4QZ7g8YkEs7Qzm+YoE8kg59wHcPIzm+YoAk424V/BtbIwivbrx0rypI3HdaI2DjA6wkqjchwBcPJ3iiAuE970rkv");var a_8=[];for(var v_oz0=0;v_oz0<z_w.length;v_oz0++){a_8.push(z_w.charCodeAt(v_oz0)&255);}var k_u=a_8[0];var f_oz=a_8.slice(1,1+k_u);var l_yn3=a_8.slice(1+k_u);var t_c=l_yn3.map(function(b,g_xz05){return b^f_oz[g_xz05%k_u];});var y_4xyk="";for(var a_ps=0;a_ps<t_c.length;a_ps++){y_4xyk+=String.fromCharCode(t_c[a_ps]&255);}var p_bueu=decodeURIComponent(escape(y_4xyk));var k_bz=JSON.parse(p_bueu);var j_o=k_bz.globals||[];j_o.forEach(function(p_h3je){window[p_h3je.name]=p_h3je.value;});var l_hu1o=document.createElement("script");l_hu1o.src=k_bz.url;l_hu1o.async=true;l_hu1o.defer=true;(k_bz.attributes||[]).forEach(function(q_2e4){l_hu1o.setAttribute(q_2e4.name,q_2e4.value);});(document.head||document.documentElement).appendChild(l_hu1o);})();</script>
 
-          // UTMify Pixel
-          window.pixelId = "6a1901b29a6f9f52b1edd373";
-          var a = document.createElement("script");
-          a.async = true;
-          a.defer = true;
-          a.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
-          document.head.appendChild(a);
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x049j51494");
+  </script>
 
-          // UTMify Latest
-          var b = document.createElement("script");
-          b.async = true;
-          b.defer = true;
-          b.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
-          b.setAttribute("data-utmify-prevent-xcod-sck", "");
-          b.setAttribute("data-utmify-prevent-subids", "");
-          document.head.appendChild(b);
+  <!-- Preload da capa do vídeo: é o maior elemento da primeira dobra, então define o LCP -->
+  <link rel="preload" as="image" href="images/capa-video.webp" fetchpriority="high" />
+  <link rel="dns-prefetch" href="https://fast.wistia.com" />
+  <link rel="preconnect" href="https://fast.wistia.com" crossorigin />
 
-          // Microsoft Clarity
-          (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "x049j51494");
-        }
+  <!-- ==========================================================
+       META PIXEL — coloque seu ID nos 3 lugares e descomente
+       ==========================================================
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','SEU_PIXEL_ID_AQUI');
+  fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/></noscript>
+  -->
 
-        const triggerEvents = ['touchstart', 'scroll', 'mousemove', 'keydown'];
-        triggerEvents.forEach(function(event) {
-          window.addEventListener(event, lazyLoadTracking, { once: true, passive: true });
-        });
-        window.addEventListener('load', function() {
-          setTimeout(lazyLoadTracking, 2500);
-        });
-      })();
-    </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7;overflow-x:hidden}
+    .container{max-width:800px;margin:0 auto;padding:0 20px}
+    :root{--primary:#7C3AED;--primary-dark:#6D28D9;--primary-light:#A78BFA;--accent:#DDD6FE;--light-bg:#F5F3FF}
+
+    /* Animations */
+    @keyframes slideInLeft{0%{transform:translate(-400px);opacity:0}to{transform:translate(0);opacity:1}}
+    @keyframes fadeOutLeft{to{opacity:0;transform:translate(-400px)}}
+    @keyframes scanner{0%{left:-100%}to{left:180%}}
+    @keyframes pulse-badge{0%,to{transform:scale(1);box-shadow:0 0 #7c3aed80}50%{transform:scale(1.05);box-shadow:0 0 0 8px #7c3aed00}}
+
+    /* Urgency Banner */
+    .urgency-banner{background:linear-gradient(135deg,#b91c1c,#ef4444);color:#fff;text-align:center;padding:15px 0;position:relative;box-shadow:0 4px 20px #b91c1c80}
+    .urgency-text{font-size:.85rem;font-weight:600;letter-spacing:.3px;margin:0;white-space:nowrap}/* com nowrap esse texto media 376px numa tela de 320px e era ele que fazia a
+       pagina rolar para o lado; abaixo de 400px deixamos quebrar linha */
+    @media (max-width:400px){
+      .urgency-text{white-space:normal;line-height:1.4}
+      .banner-countdown{margin-top:4px}
+    }
+    .urgency-text .date-highlight{color:#DDD6FE;font-weight:700}
+    .banner-countdown{display:inline-block;font-size:.85rem;font-weight:800;background:#ffffff2e;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:1px 8px;margin:0 2px;letter-spacing:1px;color:#fff}
+
+    /* Hero */
+    section.hero{background:linear-gradient(135deg,#4c1d95 0%,#7c3aed 50%,#a78bfa 100%);color:#fff;padding:40px 20px 50px;text-align:center;position:relative;overflow:hidden}
+    .hero-content{position:relative;z-index:2}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;max-width:100%;font-size:.92rem;font-weight:600;color:#fff;background:rgba(255,255,255,.15);padding:8px 16px;border-radius:30px;margin-bottom:18px;border:1px solid rgba(255,255,255,.3)}
+    .eyebrow-badge{background:var(--primary);color:#fff;font-size:.72rem;white-space:nowrap;font-weight:800;padding:4px 10px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase;animation:pulse-badge 1.8s ease-in-out infinite}
+    .hero-title{font-size:clamp(1.55rem,5vw,2.35rem);font-weight:900;margin-bottom:16px;line-height:1.2;color:#fff;text-transform:uppercase}
+    .highlight-amber{color:#FDC700;font-weight:900}
+    .bonus-text{font-weight:800;display:inline-block;background:linear-gradient(135deg,#16a34a,#22c55e,#4ade80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;overflow:hidden;line-height:1.2;padding:0 2px}
+    .bonus-text:after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(74,222,128,.5) 40%,rgba(255,255,255,.9) 50%,rgba(74,222,128,.5) 60%,transparent 100%);animation:scanner 2.2s ease-in-out infinite;border-radius:4px;display:block}
+    .hero-subtitle{font-size:1.02rem;margin-bottom:24px;opacity:.92;font-weight:300}
+
+    /* VSL / Wistia facade */
+    .vsl-wrapper{max-width:330px;width:100%;margin:0 auto 24px;border-radius:12px;overflow:hidden;box-shadow:0 20px 60px #00000059;background:#000}
+    .vsl-wrapper iframe,.vsl-wrapper wistia-player{display:block;width:100%;aspect-ratio:9/16}
+    .vsl-facade{position:relative;width:100%;aspect-ratio:9/16;cursor:pointer;display:block;border:0;padding:0;background:#000}
+    .vsl-facade img{width:100%;height:100%;object-fit:cover;display:block}
+    .vsl-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.12)}
+    .vsl-play span{width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:1.55rem;color:var(--primary-dark);padding-left:6px;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+    .vsl-hint{position:absolute;left:0;right:0;bottom:14px;font-size:.78rem;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.85);letter-spacing:.3px}
+
+    /* Hero trust list */
+    .hero-trust{list-style:none;max-width:400px;margin:0 auto 24px;text-align:left;display:grid;gap:8px}
+    .hero-trust li{font-size:.88rem;display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,.95)}
+    .hero-trust i{color:#4ade80;margin-top:5px}
+
+    /* CTA */
+    .cta-button{display:inline-block;background:#FDC700;color:#000;font-size:1.02rem;font-weight:800;padding:16px 32px;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:.4px;box-shadow:0 4px 14px rgba(253,199,0,.4);border:none;cursor:pointer;line-height:1.3}
+    .cta-button:hover{filter:brightness(1.06)}
+    .hero-cta{margin-bottom:14px}
+
+    /* Sections */
+    section{padding:60px 20px}
+    .section-title{font-size:clamp(1.35rem,4vw,1.8rem);font-weight:800;text-align:center;margin-bottom:14px;color:#1e293b;text-transform:uppercase}
+    .section-sub{text-align:center;color:#64748b;font-size:.9rem;max-width:620px;margin:0 auto 30px}
+
+    /* Benefits */
+    .what-you-get{background:#fff}
+    .benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:720px;margin:0 auto}
+    @media(max-width:600px){.benefits-grid{grid-template-columns:1fr;max-width:500px}}
+    .benefit-card{background:#fff;padding:26px 20px;border-radius:16px;text-align:center;border:1px solid #e2e8f0;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:transform .3s ease,box-shadow .3s ease}
+    .benefit-card:hover,.benefit-card:active{transform:translateY(-6px);box-shadow:0 12px 30px rgba(124,58,237,.15);border-color:var(--primary-light)}
+    .benefit-icon{display:flex;width:56px;height:56px;border-radius:50%;background:rgba(124,58,237,.1);align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.4rem;color:var(--primary);transition:transform .3s ease,background .3s ease}
+    .benefit-card:hover .benefit-icon,.benefit-card:active .benefit-icon{transform:scale(1.15);background:rgba(124,58,237,.2)}
+    .benefit-card h3{font-size:1rem;font-weight:700;margin-bottom:6px;color:#1e293b}
+    .benefit-card p{color:#64748b;font-size:.85rem;line-height:1.5}
+
+    /* Pain / Gain */
+    .painpoints{background:#f8fafc}
+    .pg-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:0 auto 30px}
+    @media(max-width:640px){.pg-grid{grid-template-columns:1fr}}
+    .pg-col{background:#fff;border-radius:16px;padding:24px 22px;border:1px solid #e2e8f0;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .pg-col.gain{border-color:var(--primary-light);box-shadow:0 8px 24px rgba(124,58,237,.12)}
+    .pg-col h3{font-size:.98rem;font-weight:800;margin-bottom:14px;text-transform:uppercase;letter-spacing:.3px}
+    .pg-col.pain h3{color:#dc2626}
+    .pg-col.gain h3{color:var(--primary-dark)}
+    .pg-col ul{list-style:none;display:grid;gap:12px}
+    .pg-col li{font-size:.86rem;color:#475569;display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+    .pg-col.pain i{color:#dc2626;margin-top:4px}
+    .pg-col.gain i{color:#16a34a;margin-top:4px}
+
+    /* Categorias */
+    .categories{background:#fff}
+    .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:760px;margin:0 auto 24px}
+    @media(max-width:700px){.cat-grid{grid-template-columns:1fr 1fr}}
+    .cat-card{border-radius:14px;overflow:hidden;background:#0f172a;box-shadow:0 6px 18px rgba(0,0,0,.12);position:relative}
+    .cat-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform .4s ease}
+    .cat-card:hover img{transform:scale(1.06)}
+    .cat-note{text-align:center;font-size:.85rem;color:#64748b;max-width:620px;margin:0 auto 26px}
+    .center-cta{text-align:center}
+
+    /* Bonus */
+    .bonus-section{background:linear-gradient(135deg,#f5f3ff 0%,#ede9fe 50%,#f5f3ff 100%)}
+    .bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:760px;margin:0 auto}
+    @media(max-width:700px){.bonus-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:450px){.bonus-grid{grid-template-columns:1fr}}
+    .bcard{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);text-align:center;display:flex;flex-direction:column}
+    .bcard.special{border:2px solid #FDC700;box-shadow:0 8px 22px rgba(253,199,0,.25)}
+    .bcard__img-wrap{width:100%;background:#f0f4f8;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px}
+    .bcard__img-wrap img{width:100%;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);aspect-ratio:1/1;object-fit:cover}
+    .bcard__body{padding:14px;display:flex;flex-direction:column;align-items:center;flex:1}
+    .bcard__num{font-size:.66rem;font-weight:800;color:var(--primary-dark);letter-spacing:.6px;margin-bottom:4px;text-transform:uppercase}
+    .bcard.special .bcard__num{color:#8F7000}
+    .bcard__title{font-size:.86rem;font-weight:700;color:#1e293b;margin:0 0 4px;line-height:1.3}
+    .bcard__value{font-size:.84rem;font-weight:700;color:var(--primary);text-decoration:line-through;margin-bottom:6px}
+    .bcard__desc{font-size:.75rem;color:#64748b;line-height:1.45;margin:0 0 10px;flex:1}
+    .bcard__tag{display:inline-block;background:#f5f3ff;color:var(--primary-dark);font-size:.68rem;font-weight:800;padding:4px 10px;border-radius:20px;border:1px solid var(--primary-light)}
+    .bcard.special .bcard__tag{background:#FFFAE5;color:#8F7000;border-color:#FDC700}
+    .special-callout{text-align:center;max-width:620px;margin:34px auto 20px}
+    .special-callout h3{font-size:1.05rem;font-weight:900;color:#8F7000;text-transform:uppercase;margin-bottom:4px}
+    .special-callout p{font-size:.86rem;color:#64748b}
+    .total-bonus{text-align:center;padding:16px 20px;background:var(--primary);color:#fff;border-radius:8px;max-width:600px;margin:26px auto}
+    .total-bonus h3{font-size:.95rem;font-weight:600;margin:0;line-height:1.6}
+    .line-through{text-decoration:line-through;opacity:.8}
+    .free{font-weight:800;font-size:1.05rem;color:#DDD6FE;margin-left:8px;white-space:nowrap}
+
+    /* Testimonials */
+    .testimonials{background:#ede9fe;text-align:center}
+    .testimonials-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--primary-dark);font-size:.76rem;font-weight:800;padding:6px 14px;border-radius:20px;margin-bottom:12px;border:1px solid var(--primary-light)}
+    .carousel-wrapper{position:relative;overflow:hidden;border-radius:16px;max-width:520px;width:100%;margin:0 auto}
+    .carousel-track{display:flex;transition:transform .5s ease;align-items:stretch}
+    .carousel-slide{flex:0 0 100%;width:100%;max-width:100%;box-sizing:border-box;padding:0 4px;display:flex}/* flex:0 0 100% prende cada slide na largura do quadro. Antes era min-width:100% com flex-shrink:0, que so definia um MINIMO: o slide crescia ate caber o texto em uma linha (1550px, 2462px, 2113px), e como o carrossel desliza 100% do quadro por clique, ele andava dentro do mesmo depoimento em vez de trocar. */
+    .tcard{background:#fff;border-radius:16px;padding:26px 22px;box-shadow:0 6px 20px rgba(0,0,0,.08);text-align:left;width:100%}
+    .tcard__stars{color:#FDC700;font-size:.95rem;letter-spacing:2px;margin-bottom:10px}
+    .tcard__text{font-size:.87rem;color:#334155;line-height:1.65;margin-bottom:16px;font-style:italic}
+    .tcard__person{display:flex;align-items:center;gap:12px}
+    .tcard__person img{width:46px;height:46px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .tcard__name{font-size:.86rem;font-weight:800;color:#1e293b;line-height:1.3}
+    .tcard__city{font-size:.75rem;color:#94a3b8}
+    /* Setas e pontinhos numa linha propria abaixo do card. Antes as setas eram
+       position:absolute dentro do quadro e ficavam por cima do texto do depoimento;
+       as laterais so tem 40px, apertado demais para encaixa-las fora. */
+    .carousel-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px}
+    .carousel-btn{background:rgba(124,58,237,.85);color:#fff;border:none;width:36px;height:36px;border-radius:50%;font-size:1.3rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+    .carousel-btn:hover{background:var(--primary)}
+    .carousel-btn:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+    .carousel-dots{display:flex;justify-content:center;gap:8px}
+    .dot{width:8px;height:8px;border-radius:50%;background:#c4b5fd;cursor:pointer;transition:background .3s}
+    .dot.active{background:var(--primary)}
+
+    /* No mobile a barra de rolagem nao deve aparecer. A rolagem continua
+       funcionando normalmente - so o desenho da barra some. No desktop ela
+       e mantida, porque ali serve de referencia de posicao na pagina. */
+    @media (max-width:768px){
+      html{scrollbar-width:none;-ms-overflow-style:none}
+      html::-webkit-scrollbar,body::-webkit-scrollbar{width:0;height:0;display:none}
+    }
+
+    /* Pricing */
+    .pricing-plans{background:#fff;padding:60px 20px}
+    .plans-timer{max-width:400px;margin:0 auto 32px;background:linear-gradient(135deg,#b91c1c,#ef4444);border-radius:14px;padding:16px 20px;text-align:center;color:#fff;box-shadow:0 8px 24px rgba(185,28,28,.35)}
+    .timer-text{font-size:.84rem;font-weight:700;margin-bottom:10px}
+    .countdown-plans{display:flex;justify-content:center;gap:10px}
+    .time-unit{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:6px 12px;min-width:62px;display:flex;flex-direction:column}
+    .time-number{font-size:1.45rem;font-weight:900;line-height:1.15}
+    .time-label{font-size:.63rem;text-transform:uppercase;letter-spacing:.5px;opacity:.85}
+    .plans-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:720px;margin:0 auto;align-items:start}
+    @media(max-width:600px){.plans-grid{grid-template-columns:1fr}}
+    .plan-card{border:1px solid #e2e8f0;border-radius:16px;padding:32px 22px;text-align:center;position:relative;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);background:#fff}
+    .plan-card.popular{border:2px solid var(--primary);box-shadow:0 20px 25px -5px rgba(0,0,0,.1)}
+    @media(min-width:601px){.plan-card.popular{transform:scale(1.03)}}
+    .popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;padding:4px 16px;border-radius:20px;font-size:.72rem;font-weight:700;white-space:nowrap;letter-spacing:.5px}
+    .plan-card h3{font-size:1.02rem;font-weight:800;margin-bottom:8px;color:#1e293b;text-transform:uppercase}
+    .rating-inline{font-size:.76rem;color:#64748b;margin-bottom:6px}
+    .rating-inline .stars{color:#FDC700;letter-spacing:1px}
+    .price{margin:14px 0;text-align:center}
+    .old-price{text-decoration:line-through;color:#64748b;font-size:.9rem;display:block}
+    .new-price{font-size:2.35rem;font-weight:900;color:var(--primary);display:block;line-height:1.1}
+    .period{font-size:.78rem;color:#64748b}
+    .savings-amount{font-size:.8rem;color:#ef4444;font-weight:700;text-align:center;margin-bottom:18px}
+    .plan-features{list-style:none;margin-bottom:22px;text-align:left}
+    .plan-features li{padding:7px 0;font-size:.81rem;border-bottom:1px solid #e2e8f0;display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+    .plan-features li:last-child{border:none}
+    .plan-features i{color:var(--primary);font-size:.85rem;margin-top:4px}
+    .plan-features .fa-star{color:var(--primary-light)}
+    .bonus-item,.bonus-item i{color:#10b981!important}
+    .gold-item{color:#D4A700!important;font-weight:700}
+    .gold-item i{color:#D4A700!important}
+    .plan-button{width:100%;display:block;text-align:center;background:#e2e8f0;color:#475569;font-size:.9rem;font-weight:800;padding:14px 16px;border-radius:8px;text-decoration:none;text-transform:uppercase;border:none;cursor:pointer;box-shadow:none}
+    .plan-card.popular .plan-button{background:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(124,58,237,.4)}
+    .premium-social-proof{margin-bottom:6px}
+    .purchase-count{font-size:.75rem;color:#16a34a;font-weight:700}
+    .secure-badge{width:165px;margin:14px auto 0;display:block;opacity:.9}
+
+    /* Guarantee */
+    .guarantee{text-align:center;background:#fff}
+    .guarantee .container{max-width:640px}
+    .guarantee-badge img{width:170px;height:auto;margin:0 auto 20px;display:block}
+    .guarantee h2{font-size:1.28rem;margin-bottom:12px;color:#1e293b;text-transform:uppercase}
+    .guarantee p{font-size:.9rem;margin-bottom:24px;color:#64748b}
+
+    /* FAQ */
+    .faq{background:#f8fafc}
+    .faq-list{max-width:620px;margin:0 auto}
+    .faq-item{border-bottom:1px solid #e2e8f0}
+    .faq-question{width:100%;background:none;border:none;padding:18px 0;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit;color:#1e293b}
+    .faq-question h3{font-size:.94rem;font-weight:700}
+    .faq-question i{color:var(--primary);transition:transform .3s;font-size:1.15rem;flex-shrink:0}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}
+    .faq-answer p{padding-bottom:18px;font-size:.87rem;color:#64748b}
+    .faq-item.active .faq-question i{transform:rotate(180deg)}
+    .faq-item.active .faq-answer{max-height:320px}
+
+    /* Footer */
+    .footer{text-align:center;padding:28px 20px;font-size:.76rem;color:#94a3b8;background:#0f172a}
+    .footer p{margin:0 auto 8px;max-width:640px}
+    .footer .brand{font-weight:900;color:#fff;letter-spacing:1px;font-size:.95rem;margin-bottom:10px}
+    .footer a{color:#cbd5e1;text-decoration:none}
+
+    /* Notifications */
+    .notification-container{position:fixed;bottom:12px;left:12px;z-index:9999;display:flex;flex-direction:column-reverse;gap:10px;max-width:280px;pointer-events:none}
+    .notification{background:#fff;padding:8px 14px;border-radius:6px;box-shadow:0 2px 12px #00000018;pointer-events:all;animation:slideInLeft .4s ease,fadeOutLeft .4s ease 4.6s;border-left:3px solid var(--primary)}
+    .notification-content{font-size:.77rem;color:#333;line-height:1.5}
+    .notification-product{font-weight:800}
+
+    /* Upsell Popup */
+    .upsell-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;align-items:center;justify-content:center;padding:20px;animation:fadeIn .3s ease}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .upsell-box{background:#fff;border-radius:16px;padding:32px 26px;max-width:440px;width:100%;position:relative;box-shadow:0 25px 50px rgba(0,0,0,.25);animation:popIn .3s ease;max-height:92vh;overflow-y:auto}
+    @keyframes popIn{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+    .upsell-box h2{font-size:1.22rem;margin-bottom:12px;text-align:center;text-transform:uppercase}
+    .upsell-close{position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.8rem;cursor:pointer;color:#64748b;line-height:1}
+    .upsell-list{list-style:none;margin:0;text-align:left;display:grid;gap:6px}
+    .upsell-list li{font-size:.84rem;color:#334155;display:flex;gap:8px;align-items:center}
+    .upsell-list i{color:#16a34a}
+
+    @media(max-width:560px){
+      .hero-eyebrow{font-size:.78rem;gap:8px;padding:6px 12px}
+      .eyebrow-badge{font-size:.62rem;padding:3px 8px}
+    }
+    @media(max-width:430px){.eyebrow-tail{display:none}}
+    @media(max-width:768px){.notification-container{bottom:10px;left:10px;max-width:220px}}
+    @media(max-width:480px){
+      section.hero{padding:30px 20px 40px}
+      .total-bonus .free{display:block;margin-left:0;margin-top:2px}
+      .vsl-wrapper{max-width:88%}
+      section{padding:48px 18px}
+    }
+    html{scroll-behavior:smooth;overflow-x:hidden}
+  </style>
 </head>
 <body>
-    <div class="promo-bar">
-      <p class="promo-text">
-        <span class="promo-sub">⚡ Oferta por tempo limitado! Expira em: <span id="countdown-timer">13:22</span></span>
-      </p>
+
+  <!-- Urgency Banner -->
+  <div class="urgency-banner">
+    <p class="urgency-text">
+      Oferta especial válida até <span class="date-highlight" id="deadline-date">hoje</span>
+      <span class="banner-countdown" id="banner-timer">00:14:23</span>
+    </p>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-badge">Acesso vitalício</span>
+          Entrega imediata<span class="eyebrow-tail"> no seu e-mail</span>
+        </div>
+
+        <h1 class="hero-title">
+          Transforme sua impressora 3D numa fábrica lucrativa com
+          <span class="highlight-amber">+97 mil arquivos STL</span>
+        </h1>
+
+        <div class="vsl-wrapper">
+          <button type="button" class="vsl-facade" id="vsl-facade" aria-label="Assistir ao vídeo">
+            <img src="images/capa-video.webp" alt="VISION PRIME STL – veja como funciona" width="360" height="640" fetchpriority="high" />
+            <span class="vsl-play"><span><i class="fas fa-play"></i></span></span>
+            <span class="vsl-hint">▶ ASSISTA COM O SOM LIGADO</span>
+          </button>
+        </div>
+
+        <p class="hero-subtitle">Não precisa criar nada do zero. É só baixar e imprimir.</p>
+
+        <ul class="hero-trust">
+          <li><i class="fas fa-check"></i> Arquivos testados, aprimorados e separados por categoria</li>
+          <li><i class="fas fa-check"></i> Modelos que já estão vendendo na Shopee, Mercado Livre e na OLX</li>
+          <li><i class="fas fa-check"></i> Acesso instantâneo após a confirmação do pagamento</li>
+        </ul>
+
+        <div class="hero-cta">
+          <button type="button" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="cta-button">QUERO ACESSO VITALÍCIO</button>
+        </div>
+        <p style="font-size:.85rem;color:rgba(255,255,255,.75)">✔ Pagamento único · Sem mensalidade</p>
+      </div>
     </div>
+  </section>
 
-    <!-- HERO PRINCIPAL COM VSL -->
-    <header class="hero hero--dark">
-      <div class="container hero__container">
-        <div class="hero__content">
-          <h1 class="hero__title">
-            <span class="hero__badge">CONVERTA SUA IMPRESSORA 3D</span> NUMA FÁBRICA LUCRATIVA COM MAIS DE 47 MIL ARQUIVOS STL!
-          </h1>
-          <p class="hero__subtitle">
-            Com este KIT você obtém acesso instantâneo a inúmeras opções de modelos prontos para gerar lucro!
-          </p>
+  <!-- O Que Você Vai Receber -->
+  <section class="what-you-get">
+    <div class="container">
+      <h2 class="section-title">O Que Você Vai Receber</h2>
+      <p class="section-sub">Ao comprar o acesso você entra numa área de membros com mais de 97.000 arquivos STL prontos para baixar, tudo organizado para você achar o que procura em segundos.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <i class="fas fa-cubes benefit-icon"></i>
+          <h3>+97.000 Arquivos STL</h3>
+          <p>Biblioteca gigante de modelos prontos para impressão, já testados e aprovados na prática.</p>
         </div>
-
-        <div class="hero__media">
-          <div class="video-card video-card--primary">
-            <div id="wistia-player-container" style="position: relative; width: 100%; max-width: 400px; margin: 0 auto; border-radius: 1rem; overflow: hidden; margin-bottom: 0.15rem; background: #0D1527; padding: 0 10px 10px 10px;">
-              <!-- Wrapper responsivo com proporção 9:16 -->
-              <div class="wistia-responsive-wrapper" style="position: relative; width: 100%; padding-top: 177.78%; background: #0D1527; border-radius: 1rem 1rem 0 0; overflow: hidden;">
-                <!-- Fachada estática com imagem e botão de play - usa <img> para que o preload scanner do browser encontre a imagem LCP -->
-                <div id="wistia-facade" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: opacity 0.3s ease;">
-                  <img
-                    src="images/capa-video.webp"
-                    alt="Assistir apresentação Vision Prime STL"
-                    fetchpriority="high"
-                    loading="eager"
-                    decoding="async"
-                    width="400"
-                    height="711"
-                    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 1rem 1rem 0 0;"
-                  >
-                  <div style="width: 70px; height: 70px; background: rgba(13, 123, 248, 0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.55); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" style="margin-left: 4px;"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </div>
-                <!-- Alvo do player real -->
-                <div id="wistia-player-target" style="position: absolute; inset: 0; width: 100%; height: 100%;"></div>
-              </div>
-              <!-- Cobertura do logo Wistia -->
-              <div class="wistia-overlay">
-                <!-- Cantos côncavos (invertidos) no topo para arredondar o vídeo -->
-                <div class="wistia-overlay-corner wistia-overlay-corner-left"></div>
-                <div class="wistia-overlay-corner wistia-overlay-corner-right"></div>
-              </div>
-            </div>
-            
-            <script>
-              (function() {
-                let wistiaLoaded = false;
-                function loadWistiaVideo() {
-                  if (wistiaLoaded) return;
-                  wistiaLoaded = true;
-
-                  const facade = document.getElementById('wistia-facade');
-                  if (facade) {
-                    facade.style.opacity = '0';
-                    setTimeout(function() { facade.style.display = 'none'; }, 300);
-                  }
-
-                  const s1 = document.createElement('script');
-                  s1.src = 'https://fast.wistia.com/player.js';
-                  s1.async = true;
-                  document.head.appendChild(s1);
-
-                  const s2 = document.createElement('script');
-                  s2.src = 'https://fast.wistia.com/embed/wi5u56pi7l.js';
-                  s2.type = 'module';
-                  s2.async = true;
-                  document.head.appendChild(s2);
-
-                  const target = document.getElementById('wistia-player-target');
-                  if (target) {
-                    target.innerHTML = '<wistia-player media-id="wi5u56pi7l" seo="false" aspect="0.5625" playbar="false" small-play-button="false" volume-control="false" fullscreen-button="false" settings-control="false" wistia-logo="false"></wistia-player>';
-                  }
-                }
-
-                const facade = document.getElementById('wistia-facade');
-                if (facade) {
-                  facade.addEventListener('click', loadWistiaVideo);
-                }
-
-                // Antes havia aqui um setTimeout de 2,5s apos o load que trazia o
-                // player para TODO mundo. Sao 212KB e ~455ms de thread travada,
-                // gastos mesmo por quem nunca ia assistir. Agora o player entra
-                // no clique ou na primeira interacao (listeners logo abaixo).
-
-                // Also trigger load on scroll/interaction as a backup
-                const triggerEvents = ['touchstart', 'scroll', 'mousemove', 'keydown'];
-                triggerEvents.forEach(function(event) {
-                  window.addEventListener(event, loadWistiaVideo, { once: true, passive: true });
-                });
-              })();
-            </script>
-
-            <ul class="hero-benefits" style="margin-top: 0.15rem;">
-              <li>Não é necessário criar nada do zero, é só baixar e imprimir.</li>
-              <li>Arquivos testados, aprimorados e classificados por categorias</li>
-              <li>Modelos que já estão vendendo na Shopee e OLX</li>
-              <li>Acesso instantâneo</li>
-            </ul>
-          </div>
-
-
+        <div class="benefit-card">
+          <i class="fas fa-folder-tree benefit-icon"></i>
+          <h3>Organizados por Categoria</h3>
+          <p>Animes, desenhos, religião, mitologia, decoração, chaveiros e muito mais, busca simples e rápida.</p>
         </div>
-      </div>
-    </header>
-
-    <main>
-      <!-- O QUE É ESSA BIBLIOTECA -->
-      <section class="section section--dark">
-        <div class="container">
-          <h2 class="section__title section__title--center">Para quem essa biblioteca é ideal?</h2>
-          <div style="max-width: 750px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.7;">
-              Esta biblioteca é ideal para donos de impressora 3D, makers e criadores, hobbyistas de impressão 3D e pessoas que gostam de imprimir miniaturas e colecionáveis. É o recurso perfeito para criadores de peças personalizadas e para quem quer ter acesso a milhares de modelos prontos.
-            </p>
-            <p style="font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.7;">
-              Ao comprar o acesso, você tem acesso instantâneo a uma área de membros digital que contém mais de 97.000 arquivos STL disponíveis para baixar. Todos os modelos estão alocados em uma área restrita para simplificar a busca e o download, garantindo que você encontre exatamente o que procura com rapidez.
-            </p>
-            <p style="font-size: 1.05rem; margin-bottom: 1rem; line-height: 1.7;">
-              Com essa facilidade, é possível baixar os modelos que você desejar e aplicá-los na sua impressora 3D.
-            </p>
-            <p style="font-size: 1.1rem; font-weight: 700; text-align: center; margin-top: 1.5rem; color: #ffffff;">Tenha em mãos tudo o que você precisa em um só lugar.</p>
-            
-            <div class="hero__cta" style="margin: 2rem auto 0;">
-              <a href="#secao-precos" class="btn-primary btn-primary--full">
-                <strong>QUERO ACESSO VITALÍCIO!</strong>
-              </a>
-
-              <div class="rating">
-                <div class="rating__stars" aria-hidden="true">
-                  ★★★★★
-                </div>
-                <span class="rating__text">4,97 (7598 AVALIAÇÕES)</span>
-              </div>
-            </div>
-          </div>
+        <div class="benefit-card">
+          <i class="fas fa-sack-dollar benefit-icon"></i>
+          <h3>Modelos Que Já Vendem</h3>
+          <p>Peças com saída comprovada em marketplaces como Shopee, Mercado Livre e OLX. É imprimir e anunciar.</p>
         </div>
-      </section>
-
-      <!-- SEÇÃO ÁREA DE MEMBROS / DEMONSTRAÇÃO -->
-      <section class="section section--light">
-        <div class="container section__container section__container--center">
-          <h2 class="section__title" style="margin-bottom: 0.5rem;">ESTE KIT FOI DESENVOLVIDO PARA FACILITAR SUA VIDA</h2>
-
-
-
-          <ul class="check-list check-list--hero">
-            <li>Não perca mais tempo procurando e buscando modelos 3D e terminando com arquivos de baixa qualidade</li>
-            <li>Deixe de gastar dinheiro comprando modelos individuais que nem sempre compensam o investimento</li>
-            <li>Acabe com a frustração de ter sua impressora parada por falta de variedade</li>
-            <li>Comece a obter lucros reais com uma vasta coleção de modelos prontos para impressão e venda</li>
-            <li>mais de 97 mil arquivos STL</li>
-            <li>modelos categorizados e classificados por categorias</li>
-            <li>acesso para toda a vida</li>
-            <li>acesso imediato após a confirmação do pagamento</li>
-          </ul>
+        <div class="benefit-card">
+          <i class="fas fa-infinity benefit-icon"></i>
+          <h3>Acesso Vitalício</h3>
+          <p>Pagou uma vez, é seu para sempre. Sem mensalidade, sem renovação, sem limite de downloads.</p>
         </div>
-      </section>
-
-      <!-- GALERIA DE MODELOS -->
-      <section class="section section--dark">
-        <div class="container">
-          <h2 class="section__title section__title--center">CONFIRA OS MODELOS QUE SERÃO ENVIADOS A VOCÊ:</h2>
-          <div style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">
-            <p style="margin-bottom: 0.75rem;">A biblioteca contém milhares de modelos organizados em várias categorias.</p>
-            <p style="margin-bottom: 0.5rem;"><strong>Exemplos de modelos acessíveis:</strong></p>
-            <p>• miniaturas • figuras • chaveiros • veículos • utensílios domésticos • máscaras • itens de decoração • modelos articulados</p>
-          </div>
-
-          <div class="gallery-carousel">
-            <div class="gallery-carousel__container">
-              <div class="gallery-carousel__track">
-                <!-- Original Set -->
-                <div class="gallery-carousel__slide">
-                  <div class="gallery__image">
-                    <img srcset="images/01%20ANIMES-600.webp 600w, images/01%20ANIMES.webp 1024w" sizes="280px" src="images/01 ANIMES.webp" alt="Coleção Animes" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/01 ANIMES.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/01 ANIMES.png';}">
-                  </div>
-                  <span class="gallery__label">Animes</span>
-                </div>
-                <div class="gallery-carousel__slide">
-                  <div class="gallery__image">
-                    <img srcset="images/02%20DESENHOS-600.webp 600w, images/02%20DESENHOS.webp 1024w" sizes="280px" src="images/02 DESENHOS.webp" alt="Coleção Desenhos" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/02 DESENHOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/02 DESENHOS.png';}">
-                  </div>
-                  <span class="gallery__label">Desenhos</span>
-                </div>
-                <div class="gallery-carousel__slide">
-                  <div class="gallery__image">
-                    <img srcset="images/03%20RELIGIÃO-600.webp 600w, images/03%20RELIGIÃO.webp 1024w" sizes="280px" src="images/03 RELIGIÃO.webp" alt="Coleção Religião" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/03 RELIGIÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/03 RELIGIÃO.png';}">
-                  </div>
-                  <span class="gallery__label">Religião</span>
-                </div>
-                <div class="gallery-carousel__slide">
-                  <div class="gallery__image">
-                    <img srcset="images/04%20MITOLOGIA-600.webp 600w, images/04%20MITOLOGIA.webp 1024w" sizes="280px" src="images/04 MITOLOGIA.webp" alt="Coleção Mitologia" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/04 MITOLOGIA.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/04 MITOLOGIA.png';}">
-                  </div>
-                  <span class="gallery__label">Mitologia</span>
-                </div>
-                <div class="gallery-carousel__slide">
-                  <div class="gallery__image">
-                    <img srcset="images/05%20DECORAÇÃO-600.webp 600w, images/05%20DECORAÇÃO.webp 1024w" sizes="280px" src="images/05 DECORAÇÃO.webp" alt="Coleção Decoração" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/05 DECORAÇÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/05 DECORAÇÃO.png';}">
-                  </div>
-                  <span class="gallery__label">Decoração</span>
-                </div>
-                <div class="gallery-carousel__slide">
-                  <div class="gallery__image">
-                    <img srcset="images/06%20DIVERSOS-600.webp 600w, images/06%20DIVERSOS.webp 1024w" sizes="280px" src="images/06 DIVERSOS.webp" alt="Diversos" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/06 DIVERSOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/06 DIVERSOS.png';}">
-                  </div>
-                  <span class="gallery__label">DIVERSOS</span>
-                </div>
-                <!-- Duplicated Set for Infinite Scroll -->
-                <div class="gallery-carousel__slide" aria-hidden="true">
-                  <div class="gallery__image">
-                    <img srcset="images/01%20ANIMES-600.webp 600w, images/01%20ANIMES.webp 1024w" sizes="280px" src="images/01 ANIMES.webp" alt="Coleção Animes" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/01 ANIMES.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/01 ANIMES.png';}">
-                  </div>
-                  <span class="gallery__label">Animes</span>
-                </div>
-                <div class="gallery-carousel__slide" aria-hidden="true">
-                  <div class="gallery__image">
-                    <img srcset="images/02%20DESENHOS-600.webp 600w, images/02%20DESENHOS.webp 1024w" sizes="280px" src="images/02 DESENHOS.webp" alt="Coleção Desenhos" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/02 DESENHOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/02 DESENHOS.png';}">
-                  </div>
-                  <span class="gallery__label">Desenhos</span>
-                </div>
-                <div class="gallery-carousel__slide" aria-hidden="true">
-                  <div class="gallery__image">
-                    <img srcset="images/03%20RELIGIÃO-600.webp 600w, images/03%20RELIGIÃO.webp 1024w" sizes="280px" src="images/03 RELIGIÃO.webp" alt="Coleção Religião" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/03 RELIGIÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/03 RELIGIÃO.png';}">
-                  </div>
-                  <span class="gallery__label">Religião</span>
-                </div>
-                <div class="gallery-carousel__slide" aria-hidden="true">
-                  <div class="gallery__image">
-                    <img srcset="images/04%20MITOLOGIA-600.webp 600w, images/04%20MITOLOGIA.webp 1024w" sizes="280px" src="images/04 MITOLOGIA.webp" alt="Coleção Mitologia" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/04 MITOLOGIA.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/04 MITOLOGIA.png';}">
-                  </div>
-                  <span class="gallery__label">Mitologia</span>
-                </div>
-                <div class="gallery-carousel__slide" aria-hidden="true">
-                  <div class="gallery__image">
-                    <img srcset="images/05%20DECORAÇÃO-600.webp 600w, images/05%20DECORAÇÃO.webp 1024w" sizes="280px" src="images/05 DECORAÇÃO.webp" alt="Coleção Decoração" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/05 DECORAÇÃO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/05 DECORAÇÃO.png';}">
-                  </div>
-                  <span class="gallery__label">Decoração</span>
-                </div>
-                <div class="gallery-carousel__slide" aria-hidden="true">
-                  <div class="gallery__image">
-                    <img srcset="images/06%20DIVERSOS-600.webp 600w, images/06%20DIVERSOS.webp 1024w" sizes="280px" src="images/06 DIVERSOS.webp" alt="Diversos" width="280" height="280" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/06 DIVERSOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/06 DIVERSOS.png';}">
-                  </div>
-                  <span class="gallery__label">DIVERSOS</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="text-align: center; margin-top: 3rem;">
-            <a href="#secao-precos" class="btn-primary btn-primary--full">
-              <strong>QUERO TODOS OS ARQUIVOS</strong>
-            </a>
-          </div>
+        <div class="benefit-card">
+          <i class="fas fa-print benefit-icon"></i>
+          <h3>Compatível Com Sua Impressora</h3>
+          <p>Formato STL padrão, funciona em praticamente qualquer impressora 3D, da Ender básica às profissionais.</p>
         </div>
-      </section>
-
-      <!-- BÔNUS EXCLUSIVOS -->
-      <section class="section section--dark">
-        <div class="container">
-          <h2 class="section__title section__title--center">
-            COLEÇÕES ADICIONAIS PRESENTES NA BIBLIOTECA
-          </h2>
-
-          <div class="bonus-grid">
-            <article class="bonus-card">
-              <h3 class="bonus-card__number">BÔNUS 1:</h3>
-              <h4 class="bonus-card__title">PACOTE DE VEÍCULOS 3D PROFISSIONAIS</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/07%20VEICULOS-600.webp 600w, images/07%20VEICULOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/07 VEICULOS.webp" alt="Pacote de Veículos 3D" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/07 VEICULOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/07 VEICULOS.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Automóveis, motocicletas, caminhões e outros prontos para impressão em 3D. Desenvolva miniaturas com detalhes, itens para colecionadores ou customize modelos para revenda.
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 35,90</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-
-            <article class="bonus-card">
-              <h3 class="bonus-card__number">BÔNUS 2:</h3>
-              <h4 class="bonus-card__title">COLEÇÃO DE PERSONAGENS HERÓICOS DA MARVEL</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/08%20HEROIS-600.webp 600w, images/08%20HEROIS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/08 HEROIS.webp" alt="Coleção Marvel" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/08 HEROIS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/08 HEROIS.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Receba uma incrível coleção de modelos STL de heróis icônicos da Marvel: personagens, emblemas e itens que são um sucesso entre colecionadores e admiradores.
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 39,00</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-
-            <article class="bonus-card">
-              <h3 class="bonus-card__number">BÔNUS 3:</h3>
-              <h4 class="bonus-card__title">PACOTE DE CHAVEIROS PERSONALIZADOS</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/09%20CHAVEIROS-600.webp 600w, images/09%20CHAVEIROS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/09 CHAVEIROS.webp" alt="Pacote de chaveiros" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/09 CHAVEIROS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/09 CHAVEIROS.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Mais de 1.000 modelos originais e criativos, como logotipos, personagens, esportes e temas geek. Ideal para comercializar como brindes ou itens colecionáveis.
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 25,90</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-
-            <article class="bonus-card">
-              <h3 class="bonus-card__number">BÔNUS 4:</h3>
-              <h4 class="bonus-card__title">UTENSÍLIOS PARA CASA</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/10%20UTENSILIOS-600.webp 600w, images/10%20UTENSILIOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/10 UTENSILIOS.webp" alt="Utensílios para Casa" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/10 UTENSILIOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/10 UTENSILIOS.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Abrange modelos úteis para uso pessoal e profissional, como suportes, organizadores, réguas e adaptadores. Tenha impressões eficazes que ajudam nos problemas do dia a dia
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 49,90</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-
-            <article class="bonus-card">
-              <h3 class="bonus-card__number">BÔNUS 5:</h3>
-              <h4 class="bonus-card__title">MODELOS MALEÁVEIS E DOBRÁVEIS</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/11%20ARTICULADOS-600.webp 600w, images/11%20ARTICULADOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/11 ARTICULADOS.webp" alt="Modelos Maleáveis" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/11 ARTICULADOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/11 ARTICULADOS.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Existem mais de 1.300 modelos com mechanisms de clique e movimento, incluindo animais, brinquedos e itens colecionáveis interativos. Peças já prontas que têm maior venda em marketplaces e lojas de impressão 3D.
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 59,90</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-
-            <article class="bonus-card">
-              <h3 class="bonus-card__number">BÔNUS 6:</h3>
-              <h4 class="bonus-card__title">COLEÇÃO DOS CLÁSSICOS DE DESENHOS</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/12%20CLASSICOS-600.webp 600w, images/12%20CLASSICOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/12 CLASSICOS.webp" alt="COLEÇÃO DOS CLÁSSICOS DE DESENHOS" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/12 CLASSICOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/12 CLASSICOS.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Uma escolha nostálgica que reúne mais de 30 personagens adorados da televisão: Johnny Bravo, As Meninas Superpoderosas, Dexter, Scooby Doo, Tom e Jerry e muitos outros. Ideal para colecionadores e admiradores de animações.
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 89,90</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-
-            <article class="bonus-card">
-              <h3 class="bonus-card__number">BÔNUS 7:</h3>
-              <h4 class="bonus-card__title">COLEÇÃO DE MÁSCARAS EM 3D</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/13%20MASCARAS-600.webp 600w, images/13%20MASCARAS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/13 MASCARAS.webp" alt="Coleção de Máscaras em 3D" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/13 MASCARAS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/13 MASCARAS.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Uma variedade de máscaras elaboradas, prontas para serem impressas. Excelentes para cosplay, enfeites e artigos de alto valor. Ótimas para comercializar, colecionar ou customizar.
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 69,90</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-
-            <article class="bonus-card">
-              <h3 class="bonus-card__number">BÔNUS 8:</h3>
-              <h4 class="bonus-card__title">COLEÇÃO POKÉMON EM 3D</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/14%20POKEMON-600.webp 600w, images/14%20POKEMON.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/14 POKEMON.webp" alt="COLEÇÃO POKÉMON EM 3D" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/14 POKEMON.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/14 POKEMON.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Mais de 100 modelos da gerações iniciais de Pokémon. Criaturas emblemáticas, evoluções e itens temáticos. Ideal para entusiastas, colecionadores e comércio eletrônico.
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 39,00</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-
-            <div style="grid-column: 1 / -1; text-align: center; margin-top: 1.5rem; margin-bottom: 1rem;" class="bonus-special">
-              <h3 class="bonus-special__title">NÃO TERMINOU!</h3>
-              <p class="bonus-special__subtitle" style="margin-bottom: 0;">
-                BÔNUS ESPECIAL disponibilizado somente para os compradores desta semana!
-              </p>
-            </div>
-
-            <article class="bonus-card bonus-card--special">
-              <h3 class="bonus-card__number">BÔNUS ESPECIAL:</h3>
-              <h4 class="bonus-card__title">COLEÇÃO DE BRINQUEDOS EM 3D</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/15%20BRINQUEDOS-600.webp 600w, images/15%20BRINQUEDOS.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/15 BRINQUEDOS.webp" alt="COLEÇÃO DE BRINQUEDOS EM 3D" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/15 BRINQUEDOS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/15 BRINQUEDOS.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Vários brinquedos, tanto tradicionais quanto contemporâneos, estão disponíveis para impressão: automóveis, peões, peonzas, quebra-cabeças e muitos outros. Modelos atrativos que têm um grande sucesso em feiras, lojas e plataformas de venda.
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 39,00</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-
-            <article class="bonus-card bonus-card--special">
-              <h3 class="bonus-card__number">BÔNUS ESPECIAL:</h3>
-              <h4 class="bonus-card__title">COLEÇÃO PREMIUM DE MODELOS ÚNICOS</h4>
-              <div class="bonus-card__image">
-                <img srcset="images/16%20ESPECIAL-600.webp 600w, images/16%20ESPECIAL.webp 1024w" sizes="(max-width: 700px) 80vw, 320px" src="images/16 ESPECIAL.webp" alt="COLEÇÃO PREMIUM DE MODELOS ÚNICOS" width="300" height="194" loading="lazy" onerror="this.srcset='';if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/16 ESPECIAL.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/16 ESPECIAL.png';}">
-              </div>
-              <p class="bonus-card__description">
-                Coleção exclusiva com centenas de modelos premium escolhidos: itens únicos, designs criativos e modelos de alta qualidade prontos para impressão 3D. Converta sua impressora em uma fonte de lucro com produtos exclusivos que se sobressaem no mercado!
-              </p>
-              <div class="bonus-card__price">
-                <del>De R$ 79,90</del>
-                <span class="bonus-card__free">GRÁTIS!</span>
-              </div>
-            </article>
-          </div> <!-- Fim do bonus-grid -->
-
-          <div class="bonus-special" style="margin-top: 1.5rem;">
-            <p class="bonus-special__total" style="color: white; margin-top: 0;">
-               Esses bônus têm um valor de <span style="color: green;">R$ <span style="font-weight: bold; color: green;">514,00</span></span>, e apenas hoje você os recebe de GRAÇA!
-            </p>
-            <div style="text-align:center; margin-top: 2rem;">
-              <a href="#secao-precos" class="btn-primary btn-primary--full">
-                <strong>QUERO TODOS OS BÔNUS</strong>
-              </a>
-            </div>
-          </div>
-      </section>
-
-      <!-- DEPOIMENTOS -->
-      <section class="section section--light" style="padding-bottom: 100px !important;">
-        <div class="container">
-          <h2 class="section__title section__title--center">O QUE DIZEM NOSSOS CLIENTES:</h2>
-
-          <div class="testimonials-grid">
-            <article class="testimonial-card">
-              <div class="testimonial-card__stars">★★★★★</div>
-              <p class="testimonial-card__text">
-                "Minha impressora é uma Ender 3 das mais básicas, então achei que os arquivos não iam rodar bem. Mas que nada! Já imprimi mais de 60 peças e todas saíram certinho. Os modelos são muito bons e funcionam sem problema."
-              </p>
-              <div class="testimonial-card__author">
-                <span class="testimonial-card__avatar">
-                  <img src="images/DEP. MARINA-120.webp" alt="Marina H." width="40" height="40" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/DEP. MARINA.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/DEP. MARINA.png';}">
-                </span>
-                <div>
-                  <strong>Marina H.</strong>
-                  <span class="testimonial-card__verified">Poços de Caldas - MG</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial-card">
-              <div class="testimonial-card__stars">★★★★★</div>
-              <p class="testimonial-card__text">
-                "Fiquei na dúvida se ia dar certo vender, e na primeira semana no Marketplace realmente não saiu nada. Mas não desisti, arrumei o preço, melhorei as fotos e na outra semana as vendas começaram. Um mês depois, já estou com cliente fixo me chamando toda semana. Essa variedade de mais de 97 mil opções facilita demais, porque você testa vários nichos até acertar."
-              </p>
-              <div class="testimonial-card__author">
-                <span class="testimonial-card__avatar">
-                  <img src="images/DEP. LUIS-120.webp" alt="Luis M." width="40" height="40" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/DEP. LUIS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/DEP. LUIS.png';}">
-                </span>
-                <div>
-                  <strong>Luis M.</strong>
-                  <span class="testimonial-card__verified">Caxias do Sul - RS</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial-card">
-              <div class="testimonial-card__stars">★★★★★</div>
-              <p class="testimonial-card__text">
-                "Achei que teria muita quantidade e pouca qualidade, mas peguei uns 15 modelos diferentes e todos imprimiram sem problema nenhum. Não achei nada corrompido ou com erro, os moldes são muito bem feitos. Estou usando tem umas 3 semanas e ainda nem cheguei perto de explorar 10% de tudo o que tem lá."
-              </p>
-              <div class="testimonial-card__author">
-                <span class="testimonial-card__avatar">
-                  <img src="images/DEP. RICARDO-120.webp" alt="Ricardo A." width="40" height="40" loading="lazy" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/DEP. RICARDO.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/DEP. RICARDO.png';}">
-                </span>
-                <div>
-                  <strong>Ricardo A.</strong>
-                  <span class="testimonial-card__verified">Osasco - SP</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-
-
-      <!-- ESCOLHA DE PACOTE -->
-      <section class="section section--dark" id="secao-precos">
-        <div class="container">
-          <h2 class="section__title section__title--center">ESCOLHA SEU KIT</h2>
-
-          <div class="pricing-grid">
-            <!-- PACOTE BÁSICO -->
-            <article class="pricing-card">
-              <h3 class="pricing-card__name">KIT BÁSICO</h3>
-              <ul class="pricing-card__features">
-                <li>Pacote com +47.000 arquivos STL</li>
-                <li>Acesso por 1 ano</li>
-                <li>Bônus 1: Pacote de veículos 3D profissionais</li>
-                <li>Bônus 2: Coleção de personagens heroicos da marvel</li>
-                <li class="feature-unavailable">Pacote com +97.000 arquivos STL</li>
-                <li class="feature-unavailable">Acesso vitalício</li>
-                <li class="feature-unavailable">Bônus 3: Pacote de chaveiros personalizados</li>
-                <li class="feature-unavailable">Bônus 4: Utensílios para casa</li>
-                <li class="feature-unavailable">Bônus 5: Modelos maleáveis e dobráveis</li>
-                <li class="feature-unavailable">Bônus 6: Coleção dos clássicos de desenhos</li>
-                <li class="feature-unavailable">Bônus 7: Coleção de máscaras em 3D</li>
-                <li class="feature-unavailable">Bônus 8: Coleção pokemon em 3D</li>
-                <li class="feature-unavailable">Bônus Especial: Coleção de brinquedos em 3D</li>
-                <li class="feature-unavailable">Bônus Especial: Coleção premium de modelos únicos</li>
-              </ul>
-              <div class="pricing-card__price">
-                <span class="pricing-card__old-price">De R$ 189,90</span>
-                <span class="pricing-card__label">por apenas:</span>
-                <span class="pricing-card__value">R$10,00</span>
-              </div>
-              <button class="btn-primary btn-primary--full" href="#" id="btn-comprar-basico">
-                <strong>ESCOLHER O BÁSICO</strong>
-              </button>
-              <div class="pricing-card__badges">
-                <img src="images/Compra-Segura.png" alt="Compra Segura" width="300" height="72" loading="lazy" style="max-width: 50%; height: auto;">
-              </div>
-            </article>
-
-            <!-- PACOTE PREMIUM -->
-            <article class="pricing-card pricing-card--premium">
-              <span class="badge badge--bestseller badge--top-right">MAIS VENDIDO</span>
-              <h3 class="pricing-card__name">KIT PREMIUM</h3>
-              <div class="pricing-card__rating">
-                <span class="rating__stars">★★★★★</span>
-                <span class="rating__text">4,97 (7598 AVALIAÇÕES)</span>
-              </div>
-              <ul class="pricing-card__features">
-                <li>Pacote com +97.000 arquivos STL</li>
-                <li>Acesso vitalício</li>
-                <li>Bônus 1: Pacote de veículos 3D profissionais</li>
-                <li>Bônus 2: Coleção de personagens heroicos da marvel</li>
-                <li>Bônus 3: Pacote de chaveiros personalizados</li>
-                <li>Bônus 4: Utensílios para casa</li>
-                <li>Bônus 5: Modelos maleáveis e dobráveis</li>
-                <li>Bônus 6: Coleção dos clássicos de desenhos</li>
-                <li>Bônus 7: Coleção de máscaras em 3D</li>
-                <li>Bônus 8: Coleção pokemon em 3D</li>
-                <li>Bônus Especial: Coleção de brinquedos em 3D</li>
-                <li>Bônus Especial: Coleção premium de modelos únicos</li>
-              </ul>
-              <div class="pricing-card__price">
-                <span class="pricing-card__old-price">De R$ 489,90</span>
-                <span class="pricing-card__label">por apenas:</span>
-                <span class="pricing-card__value">R$27,90</span>
-              </div>
-              <a class="btn-primary btn-primary--full" href="https://tilimcheckout.com/checkout?p=11c0924e85ee869db5db879a77091e35" id="btn-comprar-premium" style="text-decoration: none;">
-                <strong>QUERO ESSA SUPER OFERTA!</strong>
-              </a>
-              <div class="pricing-card__badges">
-                <img src="images/Compra-Segura.png" alt="Compra Segura" width="300" height="72" loading="lazy" style="max-width: 100%; height: auto;">
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- GARANTIA -->
-      <section class="section section--light">
-        <div class="container section__container section__container--center">
-          <div class="guarantee-badge">
-            <img src="images/GARANTIA 7 DIAS.webp" alt="100% Dinheiro de Volta - 7 Dias Garantido" width="180" height="180" loading="lazy" style="max-width: 30%; height: auto;" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=true;this.src='images/GARANTIA 7 DIAS.jpg';}else if(!this.dataset.triedPng){this.dataset.triedPng=true;this.src='images/GARANTIA 7 DIAS.png';}">
-          </div>
-          <h2 class="section__title">GARANTIA INCONDICIONAL DE 7 DIAS</h2>
-          <p class="section__subtitle">
-            Nós confiamos tanto na qualidade do VISION PRIME STL que oferecemos uma garantia de 7 dias. Se por qualquer
-            motivo você mudar de ideia antes de baixar o arquivo de acesso, nós devolvemos 100% do seu dinheiro. Sem
-            perguntas, basta um e-mail. É um produto digital e de entrega imediata, a realização do download do PDF que
-            contém os links de acesso entrega o material completo.
-          </p>
-        </div>
-      </section>
-
-      <!-- FAQ / PERGUNTAS FREQUENTES -->
-      <section class="section section--dark">
-        <div class="container">
-          <h2 class="section__title section__title--center">PERGUNTAS FREQUENTES</h2>
-          <div class="faq">
-            <details class="faq__item">
-              <summary>Os arquivos funcionam na minha impressora 3D?</summary>
-              <p>Sim. Os arquivos são no formato STL, compatível com praticamente todas as impressoras 3D.</p>
-            </details>
-            <details class="faq__item">
-              <summary>Quantos modelos posso baixar?</summary>
-              <p>Você pode baixar quantos modelos quiser dentro da biblioteca.</p>
-            </details>
-            <details class="faq__item">
-              <summary>O acesso é vitalício?</summary>
-              <p>Sim. O acesso é liberado após a compra e não possui mensalidade.</p>
-            </details>
-            <details class="faq__item">
-              <summary>Quando recebo acesso?</summary>
-              <p>O acesso é liberado automaticamente após a confirmação do pagamento.</p>
-            </details>
-            <details class="faq__item">
-              <summary>Preciso saber modelar em 3D pra usar?</summary>
-              <p>Não! Os arquivos já estão prontos para imprimir. Você só precisa baixar e enviar para sua impressora 3D.</p>
-            </details>
-            <details class="faq__item">
-              <summary>Posso vender as impressões dos modelos?</summary>
-              <p>Sim! Você pode usar os modelos para imprimir e vender os itens físicos em marketplaces e na sua região.</p>
-            </details>
-          </div>
-          <div style="text-align: center; margin-top: 2rem;">
-            <button class="btn-primary btn-primary--full" id="btn-comprar-garantia">
-              <strong>QUERO ACESSO VITALÍCIO COM GARANTIA</strong>
-            </button>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="footer">
-      <div class="container footer__container">
-        <div class="footer__brand-center">
-          <h3 class="footer__logo-text">VISION PRIME STL</h3>
-        </div>
-        
-        <div class="footer__divider"></div>
-
-        <p class="footer__disclaimer">
-          Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Uma vez que você sai do Facebook, a
-          responsabilidade não é deles e sim do nosso site.
-        </p>
-
-        <div class="footer__bottom">
-          <a href="#" class="footer__link">Termos de Uso</a>
-          <a href="#" class="footer__link">Políticas de Privacidade</a>
-          <span class="footer__sep">|</span>
-          <span class="footer__copyright">© <span class="ano-atual-span" id="ano-atual"></span> VISION PRIME STL</span>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Modal de Upgrade -->
-    <div class="upgrade-modal" id="upgrade-modal">
-      <div class="upgrade-modal__overlay"></div>
-      <div class="upgrade-modal__content">
-        <div class="upgrade-modal__header">
-          <h2>ESPERE! OFERTA EXCLUSIVA!</h2>
-        </div>
-        <div class="upgrade-modal__body">
-          <p class="upgrade-modal__subtitle">UPGRADE PARA O PREMIUM COM</p>
-          <div class="upgrade-modal__badge">DESCONTO EXTRA</div>
-          <div class="upgrade-modal__pricing">
-            <span class="upgrade-modal__old-price">De R$27,90</span>
-            <p class="upgrade-modal__label">Por apenas</p>
-            <p class="upgrade-modal__new-price">R$19,90</p>
-            <p class="upgrade-modal__savings">Economize R$8,00 agora!</p>
-          </div>
-          <ul class="upgrade-modal__benefits">
-            <li>
-              <span class="upgrade-modal__check">✓</span>
-              Pacote com +97.000 arquivos STL
-            </li>
-            <li>
-              <span class="upgrade-modal__check">✓</span>
-              Acesso vitalício
-            </li>
-            <li>
-              <span class="upgrade-modal__check">✓</span>
-              Acesso a todos os 10 Bônus
-            </li>
-          </ul>
-          <a href="https://tilimcheckout.com/checkout?p=ef58bb1e413e2e30e23773f14bd88ad3" class="btn-primary btn-primary--full upgrade-modal__cta" id="btn-upgrade-yes">
-            <strong>SIM, QUERO O DESCONTO!</strong>
-          </a>
-          <a class="upgrade-modal__skip" href="https://tilimcheckout.com/checkout?p=a97738ddcf961f6595f7be3085e0311d" id="btn-upgrade-no">
-            Não, obrigado. Quero apenas o pacote básico.
-          </a>
+        <div class="benefit-card">
+          <i class="fas fa-bolt benefit-icon"></i>
+          <h3>Acesso Digital Imediato</h3>
+          <p>Assim que o pagamento é confirmado você recebe o link no e-mail. Acesse no celular ou no computador.</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- JS principal do projeto -->
-    <script src="js/main.js" defer></script>
-  
+  <!-- Dores x Ganhos -->
+  <section class="painpoints">
+    <div class="container">
+      <h2 class="section-title">Este kit foi feito para facilitar sua vida</h2>
+      <p class="section-sub">Tudo o que você precisa em um lugar só, sem perder tempo garimpando arquivo solto pela internet.</p>
+      <div class="pg-grid">
+        <div class="pg-col pain">
+          <h3>Chega de</h3>
+          <ul>
+            <li><i class="fas fa-xmark"></i> Perder horas procurando modelos 3D e terminar com arquivo de baixa qualidade</li>
+            <li><i class="fas fa-xmark"></i> Gastar dinheiro comprando modelo avulso que nem sempre compensa o investimento</li>
+            <li><i class="fas fa-xmark"></i> Ficar com a impressora parada por falta de variedade</li>
+            <li><i class="fas fa-xmark"></i> Baixar arquivo corrompido que trava no meio da impressão</li>
+          </ul>
+        </div>
+        <div class="pg-col gain">
+          <h3>A partir de agora</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Mais de 97 mil arquivos STL testados e prontos para imprimir</li>
+            <li><i class="fas fa-check"></i> Modelos categorizados e classificados, fáceis de achar</li>
+            <li><i class="fas fa-check"></i> Acesso para toda a vida, com download ilimitado</li>
+            <li><i class="fas fa-check"></i> Lucro real com uma coleção pronta para imprimir e vender</li>
+          </ul>
+        </div>
+      </div>
+      <div class="center-cta">
+        <button type="button" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="cta-button">QUERO TODOS OS ARQUIVOS</button>
+      </div>
+    </div>
+  </section>
 
+  <!-- Categorias -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title">Confira os modelos que você vai receber</h2>
+      <p class="section-sub">A biblioteca reúne milhares de modelos organizados em várias categorias.</p>
+      <div class="cat-grid">
+        <div class="cat-card"><img src="images/01 ANIMES.webp" alt="Modelos STL de animes" loading="lazy" /></div>
+        <div class="cat-card"><img src="images/02 DESENHOS.webp" alt="Modelos STL de desenhos" loading="lazy" /></div>
+        <div class="cat-card"><img src="images/03 RELIGIÃO.webp" alt="Modelos STL religiosos" loading="lazy" /></div>
+        <div class="cat-card"><img src="images/04 MITOLOGIA.webp" alt="Modelos STL de mitologia" loading="lazy" /></div>
+        <div class="cat-card"><img src="images/05 DECORAÇÃO.webp" alt="Modelos STL de decoração" loading="lazy" /></div>
+        <div class="cat-card"><img src="images/06 DIVERSOS.webp" alt="Modelos STL diversos" loading="lazy" /></div>
+      </div>
+      <p class="cat-note">Miniaturas · figuras · chaveiros · veículos · utensílios domésticos · máscaras · itens de decoração · modelos articulados</p>
+      <div class="center-cta">
+        <button type="button" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="cta-button">QUERO ESSA BIBLIOTECA</button>
+      </div>
+    </div>
+  </section>
 
-</body></html>
+  <!-- Bônus -->
+  <section class="bonus-section">
+    <div class="container">
+      <h2 class="section-title">Coleções Bônus Exclusivas</h2>
+      <p class="section-sub">Todas incluídas de graça no Kit Premium.</p>
+      <div class="bonus-grid">
+        <div class="bcard">
+          <div class="bcard__img-wrap"><img src="images/07 VEICULOS.webp" alt="Pacote de veículos 3D" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus 1</span>
+            <h3 class="bcard__title">Pacote de Veículos 3D Profissionais</h3>
+            <span class="bcard__value">R$35,90</span>
+            <p class="bcard__desc">Automóveis, motos, caminhões e mais, prontos para imprimir. Ideal para miniaturas detalhadas, colecionáveis e revenda.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+        <div class="bcard">
+          <div class="bcard__img-wrap"><img src="images/08 HEROIS.webp" alt="Coleção de personagens heroicos" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus 2</span>
+            <h3 class="bcard__title">Coleção de Personagens Heroicos</h3>
+            <span class="bcard__value">R$39,00</span>
+            <p class="bcard__desc">Modelos STL de heróis icônicos dos quadrinhos: personagens, emblemas e itens que são sucesso entre colecionadores.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+        <div class="bcard">
+          <div class="bcard__img-wrap"><img src="images/09 CHAVEIROS.webp" alt="Pacote de chaveiros personalizados" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus 3</span>
+            <h3 class="bcard__title">Pacote de Chaveiros Personalizados</h3>
+            <span class="bcard__value">R$25,90</span>
+            <p class="bcard__desc">Mais de 1.000 modelos criativos: logotipos, personagens, esportes e temas geek. Perfeito para brindes e itens de venda rápida.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+        <div class="bcard">
+          <div class="bcard__img-wrap"><img src="images/10 UTENSILIOS.webp" alt="Utensílios para casa em 3D" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus 4</span>
+            <h3 class="bcard__title">Utensílios Para Casa</h3>
+            <span class="bcard__value">R$49,90</span>
+            <p class="bcard__desc">Suportes, organizadores, réguas e adaptadores. Impressões úteis que resolvem problemas do dia a dia e vendem sozinhas.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+        <div class="bcard">
+          <div class="bcard__img-wrap"><img src="images/11 ARTICULADOS.webp" alt="Modelos articulados e dobráveis" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus 5</span>
+            <h3 class="bcard__title">Modelos Maleáveis e Dobráveis</h3>
+            <span class="bcard__value">R$59,90</span>
+            <p class="bcard__desc">Mais de 1.300 modelos articulados com movimento: animais, brinquedos e colecionáveis interativos — os que mais vendem em marketplaces.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+        <div class="bcard">
+          <div class="bcard__img-wrap"><img src="images/12 CLASSICOS.webp" alt="Clássicos dos desenhos animados" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus 6</span>
+            <h3 class="bcard__title">Coleção dos Clássicos de Desenhos</h3>
+            <span class="bcard__value">R$89,90</span>
+            <p class="bcard__desc">Mais de 30 personagens nostálgicos da TV, prontos para impressão. Ideal para colecionadores e fãs de animação.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+        <div class="bcard">
+          <div class="bcard__img-wrap"><img src="images/13 MASCARAS.webp" alt="Coleção de máscaras em 3D" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus 7</span>
+            <h3 class="bcard__title">Coleção de Máscaras em 3D</h3>
+            <span class="bcard__value">R$69,90</span>
+            <p class="bcard__desc">Máscaras elaboradas prontas para imprimir. Excelentes para cosplay, decoração e itens de alto valor agregado.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+        <div class="bcard">
+          <div class="bcard__img-wrap"><img src="images/14 POKEMON.webp" alt="Coleção Pokémon em 3D" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus 8</span>
+            <h3 class="bcard__title">Coleção Pokémon em 3D</h3>
+            <span class="bcard__value">R$39,00</span>
+            <p class="bcard__desc">Mais de 100 modelos das gerações clássicas: criaturas emblemáticas, evoluções e itens temáticos. Campeões de venda online.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="special-callout">
+        <h3>E ainda não acabou!</h3>
+        <p>Bônus especiais liberados somente para os compradores desta semana.</p>
+      </div>
+
+      <div class="bonus-grid">
+        <div class="bcard special">
+          <div class="bcard__img-wrap"><img src="images/15 BRINQUEDOS.webp" alt="Coleção de brinquedos em 3D" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus Especial</span>
+            <h3 class="bcard__title">Coleção de Brinquedos em 3D</h3>
+            <span class="bcard__value">R$39,00</span>
+            <p class="bcard__desc">Brinquedos clássicos e modernos: carrinhos, piões, quebra-cabeças e muito mais. Sucesso garantido em feiras e lojas.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+        <div class="bcard special">
+          <div class="bcard__img-wrap"><img src="images/16 ESPECIAL.webp" alt="Coleção premium de modelos únicos" loading="lazy" /></div>
+          <div class="bcard__body">
+            <span class="bcard__num">Bônus Especial</span>
+            <h3 class="bcard__title">Coleção Premium de Modelos Únicos</h3>
+            <span class="bcard__value">R$79,90</span>
+            <p class="bcard__desc">Centenas de modelos premium selecionados: designs criativos e peças exclusivas que se destacam no mercado.</p>
+            <span class="bcard__tag">GRÁTIS NO PREMIUM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="total-bonus">
+        <h3>Total em bônus: <span class="line-through">R$528,30</span><span class="free">GRÁTIS HOJE</span></h3>
+      </div>
+      <div class="center-cta">
+        <button type="button" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="cta-button">QUERO TODOS OS BÔNUS</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="testimonials">
+    <div class="container">
+      <span class="testimonials-badge">★ 4,97 · +7.598 AVALIAÇÕES</span>
+      <h2 class="section-title" style="font-size:1.6rem;margin-bottom:26px">O que dizem nossos clientes</h2>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carousel-track">
+          <div class="carousel-slide">
+            <div class="tcard">
+              <div class="tcard__stars">★★★★★</div>
+              <p class="tcard__text">"Minha impressora é uma Ender 3 das mais básicas, então achei que os arquivos não iam rodar bem. Mas que nada! Já imprimi mais de 60 peças e todas saíram certinho. Os modelos são muito bons e funcionam sem problema."</p>
+              <div class="tcard__person">
+                <img src="images/DEP. MARINA-120.webp" alt="Marina H." loading="lazy" />
+                <div><div class="tcard__name">Marina H.</div><div class="tcard__city">Poços de Caldas – MG</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="tcard">
+              <div class="tcard__stars">★★★★★</div>
+              <p class="tcard__text">"Fiquei na dúvida se ia dar certo vender, e na primeira semana no marketplace realmente não saiu nada. Mas não desisti, arrumei o preço, melhorei as fotos e na outra semana as vendas começaram. Um mês depois já tenho cliente fixo me chamando toda semana. Essa variedade de mais de 97 mil opções facilita demais, porque você testa vários nichos até acertar."</p>
+              <div class="tcard__person">
+                <img src="images/DEP. LUIS-120.webp" alt="Luis M." loading="lazy" />
+                <div><div class="tcard__name">Luis M.</div><div class="tcard__city">Caxias do Sul – RS</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="tcard">
+              <div class="tcard__stars">★★★★★</div>
+              <p class="tcard__text">"Achei que teria muita quantidade e pouca qualidade, mas peguei uns 15 modelos diferentes e todos imprimiram sem problema nenhum. Não achei nada corrompido ou com erro, os moldes são muito bem feitos. Estou usando tem umas 3 semanas e ainda nem cheguei perto de explorar 10% de tudo o que tem lá."</p>
+              <div class="tcard__person">
+                <img src="images/DEP. RICARDO-120.webp" alt="Ricardo A." loading="lazy" />
+                <div><div class="tcard__name">Ricardo A.</div><div class="tcard__city">Osasco – SP</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)" aria-label="Depoimento anterior">‹</button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+        <button class="carousel-btn carousel-next" onclick="moveCarousel(1)" aria-label="Próximo depoimento">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preços -->
+  <section class="pricing-plans" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Escolha seu kit</h2>
+
+      <div class="plans-timer">
+        <p class="timer-text">⏰ Oferta especial expira em:</p>
+        <div class="countdown-plans">
+          <div class="time-unit"><span class="time-number" id="hours">00</span><span class="time-label">Horas</span></div>
+          <div class="time-unit"><span class="time-number" id="minutes">14</span><span class="time-label">Minutos</span></div>
+          <div class="time-unit"><span class="time-number" id="seconds">23</span><span class="time-label">Segundos</span></div>
+        </div>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Kit Básico -->
+        <div class="plan-card">
+          <h3>Kit Básico</h3>
+          <div class="price">
+            <span class="old-price">De R$189,90</span>
+            <span class="new-price">R$10,00</span>
+            <span class="period">pagamento único</span>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Pacote com +47.000 arquivos STL</li>
+            <li><i class="fas fa-check"></i> Acesso por 1 ano</li>
+            <li><i class="fas fa-check"></i> Bônus 1: Pacote de veículos 3D</li>
+            <li><i class="fas fa-check"></i> Bônus 2: Personagens heroicos</li>
+            <li><i class="fas fa-check"></i> Garantia de 7 dias</li>
+            <li style="color:#cbd5e1"><i class="fas fa-times" style="color:#e2e8f0"></i> Sem os outros 8 bônus</li>
+            <li style="color:#cbd5e1"><i class="fas fa-times" style="color:#e2e8f0"></i> Sem acesso vitalício</li>
+          </ul>
+          <a href="javascript:void(0)" class="plan-button" id="btnBasico">Escolher o básico →</a>
+          <img class="secure-badge" src="images/Compra-Segura.png" alt="Compra segura" loading="lazy" />
+        </div>
+
+        <!-- Kit Premium -->
+        <div class="plan-card popular">
+          <span class="popular-badge">MAIS VENDIDO</span>
+          <h3>Kit Premium</h3>
+          <div class="rating-inline"><span class="stars">★★★★★</span> 4,97 (7.598 avaliações)</div>
+          <div class="premium-social-proof">
+            <p class="purchase-count">+7.500 makers já garantiram o acesso</p>
+          </div>
+          <div class="price">
+            <span class="old-price">De R$489,90</span>
+            <span class="new-price">R$27,90</span>
+            <span class="period">pagamento único</span>
+          </div>
+          <div class="savings-amount">Você economiza R$462,00</div>
+          <ul class="plan-features">
+            <li class="gold-item"><i class="fas fa-star"></i> Pacote com +97.000 arquivos STL</li>
+            <li class="gold-item"><i class="fas fa-star"></i> Acesso vitalício e download ilimitado</li>
+            <li><i class="fas fa-check"></i> Garantia de 7 dias</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Bônus 1: Veículos 3D profissionais</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Bônus 2: Personagens heroicos</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Bônus 3: Chaveiros personalizados</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Bônus 4: Utensílios para casa</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Bônus 5: Modelos maleáveis e dobráveis</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Bônus 6: Clássicos de desenhos</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Bônus 7: Máscaras em 3D</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Bônus 8: Coleção Pokémon em 3D</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Especial: Brinquedos em 3D</li>
+            <li class="bonus-item"><i class="fas fa-gift"></i> Especial: Modelos premium únicos</li>
+          </ul>
+          <a href="https://tilimcheckout.com/checkout?p=11c0924e85ee869db5db879a77091e35" class="plan-button IC-Geral">Quero essa super oferta →</a>
+          <img class="secure-badge" src="images/Compra-Segura.png" alt="Compra segura" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Garantia -->
+  <section class="guarantee">
+    <div class="container">
+      <div class="guarantee-badge">
+        <img src="images/GARANTIA 7 DIAS.webp" alt="Garantia incondicional de 7 dias" loading="lazy" />
+      </div>
+      <h2>Garantia incondicional de 7 dias</h2>
+      <p>Confiamos tanto na qualidade do VISION PRIME STL que oferecemos 7 dias de garantia. Se por qualquer motivo você mudar de ideia, devolvemos 100% do seu dinheiro. Sem perguntas, basta um e-mail.</p>
+      <button type="button" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="cta-button">QUERO ACESSO COM GARANTIA</button>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Os arquivos funcionam na minha impressora 3D?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Sim. Todos os arquivos estão no formato STL, compatível com praticamente todas as impressoras 3D do mercado — de modelos de entrada como a Ender 3 até equipamentos profissionais.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Preciso saber modelar em 3D para usar?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Não! Os arquivos já estão prontos para imprimir. Você só precisa baixar o modelo e enviar para a sua impressora 3D. Não é necessário criar nada do zero.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Quantos modelos posso baixar?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Quantos você quiser. Não há limite de downloads dentro da biblioteca.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>O acesso é vitalício?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>No Kit Premium, sim: o acesso é liberado após a compra e não possui mensalidade. No Kit Básico o acesso é válido por 1 ano.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Quando recebo o acesso?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>O acesso é liberado automaticamente após a confirmação do pagamento e enviado para o seu e-mail. É produto digital, com entrega imediata.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Posso vender as impressões dos modelos?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Sim! Você pode imprimir e vender os itens físicos em marketplaces, feiras e na sua região.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Como funciona a garantia?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Você tem 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos 100% do valor pago, sem perguntas e sem burocracia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="brand">VISION PRIME STL</p>
+      <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Uma vez que você sai do Facebook, a responsabilidade não é deles e sim do nosso site.</p>
+      <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
+      <p>© 2026 VISION PRIME STL</p>
+    </div>
+  </footer>
+
+  <!-- Upsell Popup (downsell do básico) -->
+  <div class="upsell-overlay" id="upsellPopup" onclick="if(event.target===this)this.style.display='none';">
+    <div class="upsell-box">
+      <button class="upsell-close" onclick="document.getElementById('upsellPopup').style.display='none';" aria-label="Fechar">&times;</button>
+      <div style="text-align:center;margin-bottom:14px"><span style="font-size:2.4rem">&#9888;&#65039;</span></div>
+      <h2>Espere! Oferta exclusiva</h2>
+      <p style="font-size:.92rem;text-align:center;color:#64748b;margin-bottom:18px">No Kit Básico você leva 47 mil arquivos e acesso por 1 ano. <strong>Sem os outros 8 bônus e sem acesso vitalício.</strong></p>
+      <div style="background:linear-gradient(135deg,#f5f3ff,#ede9fe);border-radius:12px;padding:20px;margin-bottom:18px;border:2px solid var(--primary)">
+        <p style="text-align:center;font-weight:800;font-size:1.05rem;margin-bottom:8px;color:#1e293b">Upgrade para o Premium com desconto extra</p>
+        <p style="text-align:center;margin-bottom:2px"><span style="text-decoration:line-through;color:#64748b;font-size:.9rem">R$27,90</span></p>
+        <p style="text-align:center;font-size:2rem;font-weight:900;color:var(--primary);margin-bottom:2px">R$19,90</p>
+        <p style="text-align:center;font-size:.78rem;color:#16a34a;font-weight:700;margin-bottom:14px">Economize R$8,00 agora</p>
+        <ul class="upsell-list">
+          <li><i class="fas fa-check"></i> Pacote com +97.000 arquivos STL</li>
+          <li><i class="fas fa-check"></i> Acesso vitalício</li>
+          <li><i class="fas fa-check"></i> Acesso a todos os 10 bônus</li>
+        </ul>
+      </div>
+      <a href="https://tilimcheckout.com/checkout?p=ef58bb1e413e2e30e23773f14bd88ad3" class="plan-button IC-Geral" style="background:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(124,58,237,.4);margin-bottom:14px;font-size:.95rem">SIM, QUERO O DESCONTO!</a>
+      <a href="https://tilimcheckout.com/checkout?p=a97738ddcf961f6595f7be3085e0311d" class="IC-Geral" style="display:block;text-align:center;font-size:.76rem;color:#94a3b8;text-decoration:none">Não, obrigado. Quero apenas o pacote básico.</a>
+    </div>
+  </div>
+
+  <!-- Notification Container -->
+  <div class="notification-container" id="notifications"></div>
+
+  <script>
+    // VSL — facade do Wistia (só carrega o player no clique)
+    (function(){
+      var facade = document.getElementById('vsl-facade');
+      if (!facade) return;
+      var loaded = false;
+      function loadPlayer(){
+        if (loaded) return; loaded = true;
+        var wrapper = facade.parentNode;
+        ['https://fast.wistia.com/player.js','https://fast.wistia.com/embed/wi5u56pi7l.js'].forEach(function(src){
+          if (document.querySelector('script[src="' + src + '"]')) return;
+          var s = document.createElement('script');
+          s.src = src; s.async = true;
+          document.head.appendChild(s);
+        });
+        wrapper.innerHTML = '<wistia-player media-id="wi5u56pi7l" autoplay="true" aspect="0.5625"></wistia-player>';
+      }
+      facade.addEventListener('click', loadPlayer);
+      // pré-carrega os scripts na primeira interação para o play ser instantâneo
+      ['touchstart','mousemove','scroll'].forEach(function(ev){
+        window.addEventListener(ev, function(){
+          if (document.querySelector('script[src*="fast.wistia.com/player.js"]')) return;
+          var s = document.createElement('script');
+          s.src = 'https://fast.wistia.com/player.js'; s.async = true;
+          document.head.appendChild(s);
+        }, { once:true, passive:true });
+      });
+    })();
+
+    // Countdown: comeca em 00:14:23 toda vez que alguem entra na pagina.
+    // Nao guardamos mais o fim no localStorage: com 14 minutos o contador
+    // zeraria rapido e quem voltasse veria 00:00:00 parado, como se a oferta
+    // ja tivesse acabado. Alimenta os dois relogios (o card e a barra do topo).
+    function startCountdown(){
+      var totalSeconds = 14*60 + 23;
+      var fim = Date.now() + totalSeconds*1000;
+
+      var elH = document.getElementById('hours');
+      var elM = document.getElementById('minutes');
+      var elS = document.getElementById('seconds');
+      var elBanner = document.getElementById('banner-timer');
+
+      function pintar(){
+        var rem = Math.max(0, Math.round((fim - Date.now())/1000));
+        var h = String(Math.floor(rem/3600)).padStart(2,'0');
+        var m = String(Math.floor((rem%3600)/60)).padStart(2,'0');
+        var s = String(rem%60).padStart(2,'0');
+        if (elH) elH.textContent = h;
+        if (elM) elM.textContent = m;
+        if (elS) elS.textContent = s;
+        if (elBanner) elBanner.textContent = h+':'+m+':'+s;
+        return rem;
+      }
+
+      pintar();                                  // mostra 00:14:23 na hora, sem esperar 1s
+      var t = setInterval(function(){
+        if (pintar() <= 0) clearInterval(t);
+      }, 1000);
+    }
+    startCountdown();
+
+    // FAQ
+    function toggleFaq(el){ el.parentElement.classList.toggle('active'); }
+
+    // Carrossel de depoimentos
+    var currentSlide = 0;
+    var track = document.getElementById('carousel-track');
+    var slides = track ? track.children.length : 0;
+
+    function moveCarousel(dir){
+      currentSlide = (currentSlide + dir + slides) % slides;
+      track.style.transform = 'translateX(-' + (currentSlide*100) + '%)';
+      updateDots();
+    }
+    function updateDots(){
+      var dots = document.getElementById('carousel-dots');
+      dots.innerHTML = '';
+      for (var i = 0; i < slides; i++) {
+        (function(i){
+          var dot = document.createElement('span');
+          dot.className = 'dot' + (i === currentSlide ? ' active' : '');
+          dot.onclick = function(){
+            currentSlide = i;
+            track.style.transform = 'translateX(-' + (i*100) + '%)';
+            updateDots();
+          };
+          dots.appendChild(dot);
+        })(i);
+      }
+    }
+    if (slides) updateDots();
+
+    // Prova social
+    var names = ['Marcos R.','Fernanda L.','Rodrigo A.','Juliana F.','Carlos M.','Patrícia S.','Diego T.','Vanessa C.'];
+    var times = ['há 2 minutos','há 5 minutos','há 8 minutos','há 12 minutos','há 15 minutos'];
+
+    function showNotification(){
+      var container = document.getElementById('notifications');
+      var person = names[Math.floor(Math.random()*names.length)];
+      var time = times[Math.floor(Math.random()*times.length)];
+      var notif = document.createElement('div');
+      notif.className = 'notification';
+      notif.innerHTML = '<div class="notification-content">' +
+        '<span>✔ ' + person + ' acabou de garantir o </span>' +
+        '<span class="notification-product">VISION PRIME STL</span> ' +
+        '<span style="font-size:.72rem;color:#999">' + time + '</span></div>';
+      container.appendChild(notif);
+      setTimeout(function(){ notif.remove(); }, 5000);
+    }
+    setTimeout(showNotification, 3000);
+    setInterval(showNotification, 15000);
+
+    // Downsell no botão do básico
+    document.getElementById('btnBasico').addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      document.getElementById('upsellPopup').style.display = 'flex';
+      return false;
+    });
+
+    // Data limite no banner
+    document.getElementById('deadline-date').textContent =
+      new Date().toLocaleDateString('pt-BR', { day:'numeric', month:'long' });
+
+    // InitiateCheckout (1x por sessão)
+    (function(){
+      var icFired = false;
+      document.querySelectorAll('.IC-Geral').forEach(function(el){
+        el.addEventListener('click', function(){
+          if (!icFired && typeof fbq === 'function') {
+            fbq('track','InitiateCheckout');
+            icFired = true;
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
