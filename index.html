@@ -950,18 +950,11 @@
     document.getElementById('deadline-date').textContent =
       new Date().toLocaleDateString('pt-BR', { day:'numeric', month:'long' });
 
-    // InitiateCheckout (1x por sessão)
-    (function(){
-      var icFired = false;
-      document.querySelectorAll('.IC-Geral').forEach(function(el){
-        el.addEventListener('click', function(){
-          if (!icFired && typeof fbq === 'function') {
-            fbq('track','InitiateCheckout');
-            icFired = true;
-          }
-        });
-      });
-    })();
+    // InitiateCheckout: NAO disparar aqui.
+    // O pixel da Utmify (cdn.utmify.com.br/scripts/pixel/pixel.js) ja monitora todo <a>
+    // cuja href contem "checkout" e dispara o InitiateCheckout sozinho no clique.
+    // Um fbq('track','InitiateCheckout') manual aqui vira um SEGUNDO evento,
+    // sem event_id, entao o Meta nao deduplica e a campanha conta 2x.
   </script>
 </body>
 </html>
