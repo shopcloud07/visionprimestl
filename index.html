@@ -955,7 +955,7 @@
   for(var i=0;i<n;i++){(function(i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Imagem '+(i+1));b.onclick=function(){go(i);restart()};d.appendChild(b)})(i)}
   function mark(){for(var i=0;i<n;i++)d.children[i].classList.toggle('active',i===cur)}
   function go(i){cur=(i+n)%n;g.scrollTo({left:cards[cur].offsetLeft-g.offsetLeft,behavior:'smooth'});mark()}
-  function start(){stop();if(mq.matches)timer=setInterval(function(){go(cur+1)},1000)}
+  function start(){stop();if(mq.matches)timer=setInterval(function(){go(cur+1)},2000)}
   function stop(){clearInterval(timer)}
   function restart(){start()}
   g.addEventListener('scroll',function(){var i=Math.round(g.scrollLeft/g.clientWidth);if(i!==cur&&i>=0&&i<n){cur=i;mark()}},{passive:true});
