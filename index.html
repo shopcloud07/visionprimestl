@@ -831,8 +831,6 @@
     </div>
   </div>
 
-  <!-- Notification Container -->
-  <div class="notification-container" id="notifications"></div>
 
   <script>
     // VSL — facade do Wistia (só carrega o player no clique)
@@ -925,26 +923,6 @@
       }
     }
     if (slides) updateDots();
-
-    // Prova social
-    var names = ['Marcos R.','Fernanda L.','Rodrigo A.','Juliana F.','Carlos M.','Patrícia S.','Diego T.','Vanessa C.'];
-    var times = ['há 2 minutos','há 5 minutos','há 8 minutos','há 12 minutos','há 15 minutos'];
-
-    function showNotification(){
-      var container = document.getElementById('notifications');
-      var person = names[Math.floor(Math.random()*names.length)];
-      var time = times[Math.floor(Math.random()*times.length)];
-      var notif = document.createElement('div');
-      notif.className = 'notification';
-      notif.innerHTML = '<div class="notification-content">' +
-        '<span>✔ ' + person + ' acabou de garantir o </span>' +
-        '<span class="notification-product">VISION PRIME STL</span> ' +
-        '<span style="font-size:.72rem;color:#999">' + time + '</span></div>';
-      container.appendChild(notif);
-      setTimeout(function(){ notif.remove(); }, 5000);
-    }
-    setTimeout(showNotification, 3000);
-    setInterval(showNotification, 15000);
 
     // Downsell no botão do básico
     function fecharUpsell(){
